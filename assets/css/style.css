@@ -24,25 +24,68 @@
     color: antiquewhite;
 }
 
-#diet
-#diet-none
-#diet-dairy
-#diet-gluten
-#diet-nuts
+#diet {
 
-#pace
-#pace-surprise
-#pace-easy
-#pace-medium
-#pace-hard
+}
 
-#grp-size
-#grp-size-solo
-#grp-size-date
-#grp-size-5
-#grp-size-big
+#diet-none {
 
-// COLOR TESTING SITE
+}
+
+#diet-dairy {
+
+}
+
+#diet-gluten {
+
+}
+
+#diet-nuts {
+
+}
+
+#pace {
+
+}
+
+#pace-surprise {
+
+}
+
+#pace-easy {
+
+}
+
+#pace-medium {
+
+}
+
+#pace-hard {
+
+}
+
+#grp-size {
+
+}
+
+#grp-size-solo {
+
+}
+
+#grp-size-date {
+
+}
+
+#grp-size-5 {
+
+}
+
+#grp-size-big {
+
+}
+
+
+/* COLOR TESTING SITE */
 #color {
     background-color: #8B7E74;
 }
