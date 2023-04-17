@@ -1,5 +1,58 @@
-/* NOTES */
+:root {
+    --dark-blue: #374045;
+    --green: #557153;
+    --grey: #4b4952;
+    --yellow: #f6e0b5;
+    --dusty-blue: #567189;
+    --black: #000;
+    --white: #fff;
+    --brown: #8B7E74;
+    --yellow2: #EBC556;
+    --rust: #BB674B;
+    --orange: #CE9061;
+}
 
 #header {
-    background-color: rgb(0, 179, 255);
+    background-color: var(--green);
+}
+
+#weather-banner {
+    background-color: #567189;
+    height: 20px;
+    padding-top: -5px;
+    border-radius: 0%;
+    color: antiquewhite;
+}
+
+// COLOR TESTING SITE
+#color {
+    background-color: #8B7E74;
+}
+
+#color2 {
+    background-color: var(--dark-blue);
+}
+
+#color3 {
+    background-color: var(--dusty-blue);
+}
+
+#color4 {
+    background-color: var(--green);
+}
+
+#color5 {
+    background-color: var(--yellow);
+}
+
+#color9 {
+    background-color: #BB674B;
+}
+
+#color7 {
+    background-color: #CE9061;
+}
+
+#color8 {
+    background-color: #EBC556;
 }
