@@ -12,17 +12,87 @@
     --orange: #CE9061;
 }
 
+body {
+    font-family: 'Oswald', sans-serif;;
+}
+
 #header {
     background-color: var(--green);
+    padding-left: 20px;
+    /* margin-bottom: -28px; */
+    height: 110px;
+    align-content: center !important;
 }
 
 #weather-banner {
     background-color: #567189;
     height: 20px;
-    padding-top: -5px;
     border-radius: 0%;
     color: antiquewhite;
+    text-align: justify;
 }
+
+.bnr-text {
+    justify-content: center !important;
+    margin-top: -12px !important;
+}
+
+/* (A) FIXED WRAPPER */
+.hwrap {
+    overflow: hidden;
+    /* HIDE SCROLL BAR */
+    background: #567189;
+    color: antiquewhite;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 22px;
+}
+
+/* (B) MOVING TICKER WRAPPER */
+.hmove {
+    display: flex;
+    margin-right: 33rem;
+    margin-left: 30rem;
+}
+
+/* (C) ITEMS - INTO A LONG HORIZONTAL ROW */
+.hitem {
+    flex-shrink: 0;
+    width: 100%;
+    box-sizing: border-box;
+    align-items: center;
+    text-align: center;
+}
+
+#time-ticker {
+    align-items: center;
+}
+
+/* (D) ANIMATION - MOVE ITEMS FROM RIGHT TO LEFT */
+/* 4 ITEMS -400%, CHANGE THIS IF YOU ADD/REMOVE ITEMS */
+@keyframes tickerh {
+    0% {
+        transform: translate3d(100%, 0, 0);
+    }
+
+    100% {
+        transform: translate3d(-400%, 0, 0);
+    }
+}
+
+.hmove {
+    animation: tickerh linear 60s infinite;
+}
+
+.hmove:hover {
+    animation-play-state: paused;
+}
+
+/* @media only screen and (max-width: 768px) {
+    .hmove {
+        animation-duration: 60s;
+    }
+} */
 
 #diet {
 
@@ -116,4 +186,15 @@
 
 #color8 {
     background-color: #EBC556;
+}
+
+#logo {
+    height: 100px;
+    width: auto;
+}
+
+#logo-container {
+    margin-bottom: -27px;
+    padding-left: 1.4em;
+    padding-bottom: .8em;
 }
