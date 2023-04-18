@@ -25,3 +25,5 @@ navigator.geolocation.getCurrentPosition((position) => {
       console.error(error);
     });
 });
+var results=JSON.parse(localStorage.getItem("choices"))
+console.log(results);

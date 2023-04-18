@@ -1,33 +1,45 @@
 // NOTES
-var headerButton = document.getElementById("card-header-icon");
+var headerButton = document.querySelector(".card-header-icon");
 
-var footerButton = document.getElementById("card-footer-item");
+var footerButton = document.querySelector(".card-footer-item");
 
-var dropdowns=document.querySelectorAll("select");
+var dropdowns = document.querySelectorAll("select");
 
-var pace=document.getElementById("pace");
+var pace = document.getElementById("pace");
 
-var dietaryRestrictions=document.getElementById("diet");
+var dietaryRestrictions = document.getElementById("diet");
 
-var groupSize=document.getElementById("grp-size")
+var groupSize = document.getElementById("grp-size");
 
-dropdowns.forEach(dietaryRestrictions => {
-    const dietNone = dropdowns.querySelector("diet-none");
-    const dietDairy= dropdowns.querySelector("diet-dairy");
-    const dietGluten = dropdowns.querySelector("diet-gluten");
-    const dietNuts = dropdowns.querySelector("diet-nuts");
+//dropdowns.forEach(dietaryRestrictions => {
+const dietNone = document.querySelector("diet-none");
+const dietDairy = document.querySelector("diet-dairy");
+const dietGluten = document.querySelector("diet-gluten");
+const dietNuts = document.querySelector("diet-nuts");
+//})
+
+//dropdowns.forEach(pace => {
+const paceSurprise = document.querySelector("pace-surprise");
+const paceEasy = document.querySelector("pace-easy");
+const paceMedium = document.querySelector("pace-medium");
+const paceHard = document.querySelector("pace-hard");
+//})
+
+//dropdowns.forEach(groupSize => {
+const solo = document.querySelector("grp-size-solo");
+const grpDate = document.querySelector("grp-size-date");
+const grpBig = document.querySelector("grp-size-5");
+const grpHuge = document.querySelector("grp-size-big");
+//})
+
+footerButton.addEventListener("click", function (event) {
+    var options = document.querySelectorAll("option")
+    var results = [];
+    options.forEach(function (option) {
+        if (option.selected == true) {
+            results.push(option.textContent)
+        }
+    })
+//var results= localStorage.getItem("choices")
+localStorage.setItem("choices", JSON.stringify(results));
 })
-
-dropdowns.forEach(pace => {
- const paceSurprise = dropdowns.querySelector("pace-surprise");
- const paceEasy = dropdowns.querySelector("pace-easy");
- const paceMedium = dropdowns.querySelector("pace-medium");
- const paceHard = dropdowns.querySelector("pace-hard");
-})
-
-dropdowns.forEach(groupSize => {
-    const solo= dropdowns.querySelector("grp-size-solo");
-    const paceEasy = dropdowns.querySelector("grp-size-date");
-    const paceMedium = dropdowns.querySelector("grp-size-5");
-    const paceHard = dropdowns.querySelector("grp-size-big");
-   })
