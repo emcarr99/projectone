@@ -13,24 +13,41 @@
 }
 
 body {
-    font-family: 'Oswald', sans-serif;;
+    font-family: 'Oswald', sans-serif;
+    ;
 }
 
 #header {
-    background-color: var(--green);
-    padding-left: 20px;
+    background-color: var(--grey);
     /* margin-bottom: -28px; */
-    height: 110px;
+    height: 26em;
     align-content: center !important;
 }
 
-#weather-banner {
+h3 {
+    position: relative;
+    text-align: center;
+    color: white;
+    font-size: 120px;
+    text-shadow: 0px 4px 4px var(--black);
+}
+
+.logo {
+    position: absolute;
+    top: 36%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    font-family: 'Amatic SC', cursive;
+}
+
+/* #weather-banner {
     background-color: #567189;
     height: 20px;
     border-radius: 0%;
     color: antiquewhite;
     text-align: justify;
-}
+} */
 
 .bnr-text {
     justify-content: center !important;
@@ -43,9 +60,9 @@ body {
     /* HIDE SCROLL BAR */
     background: #567189;
     color: antiquewhite;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    font-size: 22px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    font-size: 30px;
 }
 
 /* (B) MOVING TICKER WRAPPER */
@@ -88,71 +105,190 @@ body {
     animation-play-state: paused;
 }
 
+.weather-widget {
+    width: 330px;
+    position: absolute;
+    right: 0;
+    background-color: #567189;
+    z-index: 4;
+    margin-bottom: -72px;
+}
+
+/* .weather-container {
+    float: left;
+} */
+
 /* @media only screen and (max-width: 768px) {
     .hmove {
         animation-duration: 60s;
     }
 } */
 
-#diet {
+/* HERO IMAGE SLIDER */
 
+.slider {
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+    position: relative;
 }
 
-#diet-none {
-
+.slider .slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    animation: slider 35.2s infinite;
 }
 
-#diet-dairy {
-
+.slider .slide:nth-child(1) {
+    background-image: url('/assets/images/Trail1.png');
+    animation-delay: 0s;
 }
 
-#diet-gluten {
-
+.slider .slide:nth-child(2) {
+    background-image: url('/assets/images/Trail2.png');
+    animation-delay: -4.4s;
 }
 
-#diet-nuts {
-
+.slider .slide:nth-child(3) {
+    background-image: url('/assets/images/Trail3.png');
+    animation-delay: -8.8;
 }
 
-#pace {
-
+.slider .slide:nth-child(4) {
+    background-image: url('');
+    animation-delay: -13.2s;
 }
 
-#pace-surprise {
-
+.slider .slide:nth-child(5) {
+    background-image: url('/assets/images/Trail5.png');
+    animation-delay: -17.6s;
 }
 
-#pace-easy {
-
+.slider .slide:nth-child(6) {
+    background-image: url('/assets/images/Trail6.png');
+    animation-delay: -22s;
 }
 
-#pace-medium {
-
+.slider .slide:nth-child(7) {
+    background-image: url('/assets/images/Trail7.png');
+    animation-delay: -26.4s;
 }
 
-#pace-hard {
-
+.slider .slide:nth-child(8) {
+    background-image: url('/assets/images/Trail8.png');
+    animation-delay: -30.8s;
 }
 
-#grp-size {
 
+@keyframes slider {
+
+    0%,
+    18%,
+    100% {
+        opacity: 1;
+        animation-timing-function: ease;
+        z-index: 0;
+    }
+
+    20% {
+        opacity: 0;
+        animation-timing-function: step-end;
+        z-index: 0;
+    }
+
+    98% {
+        opacity: 1;
+        animation-timing-function: step-end;
+        z-index: -1;
+    }
 }
 
-#grp-size-solo {
-
+.navbar-item {
+    font-size: 24px;
 }
 
-#grp-size-date {
-
+.navbar-logo {
+    position: relative;
+    margin-left: 2em;
+    margin-right: 1.7em;
+    padding-top: .84em;
 }
 
-#grp-size-5 {
-
+.navbar-logo:hover {
+    cursor: context-menu;
 }
 
-#grp-size-big {
-
+h1 {
+    position: relative;
+    text-align: center;
+    font-family: 'Amatic SC', cursive;
+    font-size: 78px !important;
+    padding-bottom: 20px;
 }
+
+h2 {
+    position: relative;
+    text-align: center;
+    font-size: 36px !important;
+}
+
+#snd-description {
+    position: relative;
+    margin-top: -6.8rem !important;
+}
+
+#how-it-works {
+    position: relative;
+    text-align: center;
+    font-size: 30px !important;
+}
+
+.cards-align {
+    display: flex;
+    align-items: center;
+}
+#preferences-container {
+    width: 38rem !important;
+}
+
+#past-searches-container {
+    width: 38rem !important;
+}
+
+#diet {}
+
+#diet-none {}
+
+#diet-dairy {}
+
+#diet-gluten {}
+
+#diet-nuts {}
+
+#pace {}
+
+#pace-surprise {}
+
+#pace-easy {}
+
+#pace-medium {}
+
+#pace-hard {}
+
+#grp-size {}
+
+#grp-size-solo {}
+
+#grp-size-date {}
+
+#grp-size-5 {}
+
+#grp-size-big {}
 
 
 /* COLOR TESTING SITE */
