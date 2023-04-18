@@ -146,6 +146,19 @@
                         </select>
                     </div>
                 </div>
+                <!-- added user selections - emma -->
+                <label class="label">Trail Type</label>
+                <div class="control">
+                    <div class="select" id="pace">
+                        <select name="trailType" id="trailType">
+                            <option value="" disabled="" selected=""></option>
+                            <option value="hiking">Hiking</option>
+                            <option value="mountain biking">Mountain Biking</option>
+                            <option value="trail running">Trail Running</option>
+                            <option value="atv">ATV</option>
+                        </select>
+                    </div>
+                </div>
                 <label class="label">Group Size</label>
                 <div class="control">
                     <div class="select" id="grp-size">
@@ -163,7 +176,7 @@
 
         <footer class="card-footer">
             <!-- <button class="card-footer-item" onclick="window.location.href='/results.html'">Save!</button> -->
-            <button class="card-footer-item">Search</button>
+            <button class="card-footer-item" id="searchBtn">Search</button>
         </footer>
     </div>
 
@@ -217,16 +230,18 @@
                 </footer>
             </div>
         </div>
-
+       
+       
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 
         <script src="assets/js/script.js"></script>
         <!-- Compressed JavaScript -->
         <!-- jQuery -->
-        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+       
         <!-- Day.js -->
         <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"
             integrity="sha256-iu/zLUB+QgISXBLCW/mcDi/rnf4m4uEDO0wauy76x7U=" crossorigin="anonymous"></script>
-
+         <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script> -->
         <script src="./assets/js/timetick.js"></script>
 
         </body>

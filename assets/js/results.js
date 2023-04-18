@@ -1,3 +1,5 @@
+$(document).ready(function () {
+
 const apiKey = "ae491393c8msh4acba715ebb33ebp1addcajsn3f334bdd5e78";
 
 // Get the user's current location
@@ -28,15 +30,34 @@ navigator.geolocation.getCurrentPosition((position) => {
 var results = JSON.parse(localStorage.getItem("choices"));
 console.log(results);
 
-const options = {
-  method: "GET",
-  headers: {
-    "X-RapidAPI-Key": "ae491393c8msh4acba715ebb33ebp1addcajsn3f334bdd5e78",
-    "X-RapidAPI-Host": "edamam-recipe-search.p.rapidapi.com",
-  },
-};
+function getValues() {
+ let searchValues = document.location.search.split('&')
+ console.log(searchValues);
+}
 
-fetch("https://edamam-recipe-search.p.rapidapi.com/search?q=snack", options)
-  .then((response) => response.json())
-  .then((response) => console.log(response))
-  .catch((err) => console.error(err));
+async function getTrailApi () {
+
+}
+
+async function getSnackApi () {
+
+}
+
+function renderTrail (trailResults) {
+
+}
+
+function renderSnack (snackResults) {
+
+}
+
+
+
+
+
+
+
+
+
+
+})
