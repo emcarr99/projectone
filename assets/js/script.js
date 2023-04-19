@@ -43,3 +43,4 @@ footerButton.addEventListener("click", function (event) {
 //var results= localStorage.getItem("choices")
 localStorage.setItem("choices", JSON.stringify(results));
 })
+
