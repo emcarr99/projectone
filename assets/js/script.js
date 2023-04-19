@@ -1,4 +1,6 @@
-// NOTES
+// entire page should be inside of this function
+$(document).ready(function () {
+
 var headerButton = document.querySelector(".card-header-icon");
 
 var footerButton = document.querySelector(".card-footer-item");
@@ -43,4 +45,28 @@ footerButton.addEventListener("click", function (event) {
 //var results= localStorage.getItem("choices")
 localStorage.setItem("choices", JSON.stringify(results));
 })
+// using async function to use a promise to pass in parameters
+$("#searchBtn").on('click', async () => {
+    let type = document.getElementById("trailType").value;
+    let diet = document.getElementById("diet").value;
+    document.location.assign("./results.html?trailType=" + type + "&diet=" + diet);
+    await Promise.race([getTrailApi(), getSnackApi()]);
+    renderTrail();
 
+    console.log(type, diet);
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+})
