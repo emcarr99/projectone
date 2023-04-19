@@ -10,10 +10,10 @@
 </head>
 
 
-<body>
+<body class="body">
     <nav class="navbar" role="navigation" aria-label="main navigation">
         <div class="navbar-brand">
-            <img src="./assets/images/logo-placeholder.png" alt="Left Logo" class="left-logo">
+            <img src="./assets/images/SnD lettering2.png" alt="Left Logo" class="left-logo">
         </div>
         <div class="navbar-item">
             Options, options, options, what will you choose?
@@ -24,19 +24,15 @@
             </div>
         </div>
     </nav>
-    <section class="hero">
-        <div class="hero-body">
-            <div class="container">
-                <h2>Showing results for <span id="result-text"></span></h2>
-                
-            </div>
-        </div>
+
     </section>
     <section class="section">
+
         <div class="container is-full-hd">
-            
+
             <div class="columns" id="result-content">
                 <div class="column is-half" id="snacks">
+                    <h2>Showing results for: <span id="result-text"></span></h2>
                     <h3 class="headerforsnd">Snacks</h3>
                     <div class="recipeCard">Option 1</div>
                     <div class="recipeCard">Option</div>
@@ -45,6 +41,7 @@
                     <div class="recipeCard">Option</div>
                 </div>
                 <div class="column is-half" id="dashes">
+                    <h2>Showing results for: <span id="result-text"></span></h2>
                     <h3 class="headerforsnd">Dashes</h3>
                     <div class="trailCard">Option</div>
                     <div class="trailCard">Option</div>
@@ -59,15 +56,27 @@
 
         </div>
     </section>
-    <section class="hero is-small">
+    <section class="hero">
         <div class="hero-body">
-            <div class="container">
-                <p class="save-options">Would you like to save your options to view for future refernce?</p>
-                <a class="button is-rounded">Save Options</a>
+            <div class="container has-text-centered" id="options-text">
+                Would you like to save your options for future reference?
+            
+                <a class="button is-small is-rounded">Save Options</a>
             </div>
         </div>
     </section>
-
+    <footer class="footer">
+        <div class="container is-full-hd">
+            <div class="content has-text-centered">
+                <p>
+                    <strong>Snack 'n' Dash</strong> by <a href="https://github.com/emcarr99/snackndash">Group 1</a>. The source code is licensed
+                    <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. 
+                </p>
+            </div>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="assets/js/results.js"></script>
 </body>
 
 
