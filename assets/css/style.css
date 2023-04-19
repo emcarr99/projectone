@@ -41,14 +41,6 @@ h3 {
     font-family: 'Amatic SC', cursive;
 }
 
-/* #weather-banner {
-    background-color: #567189;
-    height: 20px;
-    border-radius: 0%;
-    color: antiquewhite;
-    text-align: justify;
-} */
-
 .bnr-text {
     justify-content: center !important;
     margin-top: -12px !important;
@@ -160,7 +152,7 @@ h3 {
 }
 
 .slider .slide:nth-child(4) {
-    background-image: url('');
+    background-image: url('/assets/images/Trail4.png');
     animation-delay: -13.2s;
 }
 
@@ -208,6 +200,11 @@ h3 {
     }
 }
 
+#navbar-border {
+    border-bottom: solid 1px #b6b7b7b0 !important;
+    padding-bottom: .3em;
+}
+
 .navbar-item {
     font-size: 24px;
 }
@@ -253,11 +250,11 @@ h2 {
     align-items: center;
 }
 #preferences-container {
-    width: 38rem !important;
+    width: 200px !important;
 }
 
 #past-searches-container {
-    width: 38rem !important;
+    width: 200px !important;
 }
 
 #diet {}

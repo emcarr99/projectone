@@ -60,7 +60,7 @@ $("#searchBtn").on('click', async () => {
 })
 
 clearButton.addEventListener("click", function (event){
-
+modal.showmodal();
 })
 
 
