@@ -126,12 +126,15 @@
             <div class="field column">
                 <label class="label">Do you have any dietary preferences?</label>
                 <div class="control">
-                    <div class="select" id="diet">
-                        <select>
-                            <option id="diet-none">None</option>
-                            <option id="diet-dairy">Option 1</option>
-                            <option id="diet-gluten">Option 2</option>
-                            <option id="diet-nuts">Option 3</option>
+                    <div class="select">
+                     <select id="diet">
+                            <option value="" disabled="" selected=""></option>
+                            <option value="dairy-free">Dairy-Free</option>
+                            <option value="gluten-free">Gluten-Free</option>
+                            <option value="keto-friendly">Keto-Friendly</option>
+                            <option value="vegan">Vegan</option>
+                            <option value="vegetarian">Vegetarian</option>
+                            <option value="peanut-free">Peanut-Free</option>
                         </select>
                     </div>
                 </div>
@@ -143,6 +146,19 @@
                             <option id="pace-easy"></option>
                             <option id="pace-medium">Option 2</option>
                             <option id="pace-hard">Option 3</option>
+                        </select>
+                    </div>
+                </div>
+                <!-- added user selections - emma -->
+                <label class="label">Trail Type</label>
+                <div class="control">
+                    <div class="select" id="pace">
+                        <select name="trailType" id="trailType">
+                            <option value="" disabled="" selected=""></option>
+                            <option value="hiking">Hiking</option>
+                            <option value="mountain biking">Mountain Biking</option>
+                            <option value="trail running">Trail Running</option>
+                            <option value="atv">ATV</option>
                         </select>
                     </div>
                 </div>
@@ -163,7 +179,7 @@
 
         <footer class="card-footer">
             <!-- <button class="card-footer-item" onclick="window.location.href='/results.html'">Save!</button> -->
-            <button class="card-footer-item">Search</button>
+            <button class="card-footer-item" id="searchBtn">Search</button>
         </footer>
     </div>
 
@@ -217,12 +233,14 @@
                 </footer>
             </div>
         </div>
-
+       
+       
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 
         <script src="assets/js/script.js"></script>
         <!-- Compressed JavaScript -->
         <!-- jQuery -->
-        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+       
         <!-- Day.js -->
         <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"
             integrity="sha256-iu/zLUB+QgISXBLCW/mcDi/rnf4m4uEDO0wauy76x7U=" crossorigin="anonymous"></script>
