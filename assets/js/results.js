@@ -65,7 +65,7 @@ $(document).ready(function () {
 
   async function getSnackApi(dietType) {
      let recipeResults = await fetch(
-       "https://api.edamam.com/api/recipes/v2?type=public&app_id=6e31f74f&app_key=d2f7dc250b26add1c1083d4f189e78d8&mealType=snack&health=" +
+       "https://api.edamam.com/api/recipes/v2?type=public&app_id=6e31f74f&app_key=d2f7dc250b26add1c1083d4f189e78d8&mealType=snack&dishType=biscuits%20and%20cookies&health=" +
          dietType
      );
 
