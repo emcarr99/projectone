@@ -13,6 +13,9 @@ var dietaryRestrictions = document.getElementById("diet");
 
 var groupSize = document.getElementById("grp-size");
 
+var clearButton = document.querySelector(".button");
+
+var modal = document.querySelector(".modal");
 //dropdowns.forEach(dietaryRestrictions => {
 const dietNone = document.querySelector("diet-none");
 const dietDairy = document.querySelector("diet-dairy");
@@ -56,7 +59,9 @@ $("#searchBtn").on('click', async () => {
     console.log(type, diet);
 })
 
+clearButton.addEventListener("click", function (event){
 
+})
 
 
 
