@@ -109,81 +109,57 @@
                     </p>
                 </header>
 
-        <div class="card-content columns">
-            <div class="field column">
-                <label class="label">Do you have any dietary preferences?</label>
-                <div class="control">
-<<<<<<< HEAD
-                    <div class="select" id="diet">
-                        <select>
-<<<<<<< HEAD
-                            <option  id="diet-none">None</option>
-                            <option  id="diet-dairy">No dairy</option>
-                            <option id="diet-gluten">No gluten</option>
-                            <option id="diet-nuts">No nuts</option>
-=======
-                            <option id="diet-none">None</option>
-                            <option id="diet-dairy">Option 1</option>
-                            <option id="diet-gluten">Option 2</option>
-                            <option id="diet-nuts">Option 3</option>
->>>>>>> 3f5a4fbb04fca8e6b010a280d91bd7e8a9b5e677
-=======
-                    <div class="select">
-                     <select id="diet">
-                            <option value="" disabled="" selected=""></option>
-                            <option value="dairy-free">Dairy-Free</option>
-                            <option value="gluten-free">Gluten-Free</option>
-                            <option value="keto-friendly">Keto-Friendly</option>
-                            <option value="vegan">Vegan</option>
-                            <option value="vegetarian">Vegetarian</option>
-                            <option value="peanut-free">Peanut-Free</option>
->>>>>>> 194ede111ae5521541ee303e30530055a5d15178
-                        </select>
+                <div class="card-content columns">
+                    <div class="field column">
+                        <label class="label">Do you have any dietary preferences?</label>
+                        <div class="control">
+                            <div class="select" id="diet">
+                                <select>
+                                    <option id="diet-none" value="" disabled="" selected="">None</option>
+                                    <option id="diet-dairy" value="dairy-free">No dairy</option>
+                                    <option id="diet-gluten" value="gluten-free">No gluten</option>
+                                    <option id="diet-nuts" value="peanut-free">No nuts</option>
+                                    <option id="diet-keto" value="keto-friendly">None</option>
+                                    <option id="diet-vegan" value="vegan">Option 1</option>
+                                    <option id="diet-vegetarian" value="vegetarian">Option 2</option>
+                                    <option id="diet-nuts">Option 3</option>
+                                </select>
+                            </div>
+
+                            <label class="label">Trail Type</label>
+                            <div class="control">
+                                <div class="select" id="pace">
+                                    <select name="trailType" id="trailType">
+                                        <option id="trail-any" value="" disabled="" selected="">Surprise me! I'm down
+                                            for anything.</option>
+                                        <option id="trail-hike" value="hiking">Hiking</option>
+                                        <option id="trail-biking" value="mountain biking">Mountain Biking</option>
+                                        <option id="trail-run" value="trail running">Trail Running</option>
+                                        <option id="trail-atv" value="atv">ATV</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <label class="label">Group Size</label>
+                            <div class="control">
+                                <div class="select" id="grp-size">
+                                    <select>
+                                        <option id="grp-size-solo">Solo</option>
+                                        <option id="grp-size-date">Date</option>
+                                        <option id="grp-size-5">Group of 5</option>
+                                        <option id="grp-size-big">Group of 6+</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <label class="label">Pace?</label>
-                <div class="control">
-                    <div class="select" id="pace">
-                        <select>
-                            <option id="pace-surprise">Surprise me! I'm down for anything.</option>
-                            <option id="pace-easy">Easy trail</option>
-                            <option id="pace-medium">Medium trail</option>
-                            <option id="pace-hard">Hard trail</option>
-                        </select>
-                    </div>
-                </div>
-                <!-- added user selections - emma -->
-                <label class="label">Trail Type</label>
-                <div class="control">
-                    <div class="select" id="pace">
-                        <select name="trailType" id="trailType">
-                            <option value="" disabled="" selected=""></option>
-                            <option value="hiking">Hiking</option>
-                            <option value="mountain biking">Mountain Biking</option>
-                            <option value="trail running">Trail Running</option>
-                            <option value="atv">ATV</option>
-                        </select>
-                    </div>
-                </div>
-                <label class="label">Group Size</label>
-                <div class="control">
-                    <div class="select" id="grp-size">
-                        <select>
-                            <option id="grp-size-solo">Solo</option>
-                            <option id="grp-size-date">Date</option>
-                            <option id="grp-size-5">Group of 5</option>
-                            <option id="grp-size-big">Group of 6+</option>
-                        </select>
-                    </div>
-                </div>
+                <footer class="card-footer">
+                    <!-- <button class="card-footer-item" onclick="window.location.href='/results.html'">Save!</button> -->
+                    <button class="card-footer-item" id="searchBtn">Search</button>
+                </footer>
             </div>
         </div>
-
-        <footer class="card-footer">
-            <!-- <button class="card-footer-item" onclick="window.location.href='/results.html'">Save!</button> -->
-            <button class="card-footer-item" id="searchBtn">Search</button>
-        </footer>
-    </div>
 
         <!-- CARD: SEPARATE CARD FOR PAST SAVED SEARCHES -->
         <div class="container column" id="past-searches-container">
@@ -235,19 +211,18 @@
                     <button class="button is-success">Save changes</button>
                     <button class="button">Cancel</button>
                 </footer>
-            </div>
         </div>
-       
-       
-        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    </div>
 
-        <script src="assets/js/script.js"></script>
-        <!-- Compressed JavaScript -->
-        <!-- jQuery -->
-       
-        <!-- Day.js -->
-        <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"
-            integrity="sha256-iu/zLUB+QgISXBLCW/mcDi/rnf4m4uEDO0wauy76x7U=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+    <script src="assets/js/script.js"></script>
+    <!-- Compressed JavaScript -->
+    <!-- jQuery -->
+
+    <!-- Day.js -->
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"
+        integrity="sha256-iu/zLUB+QgISXBLCW/mcDi/rnf4m4uEDO0wauy76x7U=" crossorigin="anonymous"></script>
 
     <script src="./assets/js/timetick.js"></script>
 
