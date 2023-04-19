@@ -30,10 +30,24 @@ navigator.geolocation.getCurrentPosition((position) => {
 var results = JSON.parse(localStorage.getItem("choices"));
 console.log(results);
 
+let resultTextEl = document.querySelector("result-text");
+let resultContentEl = document.querySelector("#result-content");
+
 function getValues() {
- let searchValues = document.location.search.split('&')
- console.log(searchValues);
+ let searchValues = document.location.search.split('&');
+console.log(searchValues);
+
+let query = searchValues[0].split('=').pop();
+let format = searchValues[1].split('=').pop();
+
+searchTrail(query, format);
 }
+
+function searchTrail(query, format) {
+  let trailUrl = ""
+}
+
+
 
 async function getTrailApi () {
 

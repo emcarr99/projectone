@@ -46,13 +46,13 @@ footerButton.addEventListener("click", function (event) {
 localStorage.setItem("choices", JSON.stringify(results));
 })
 // using async function to use a promise to pass in parameters
-$("#saveBtn").on('click', async () => {
+$("#searchBtn").on('click', async () => {
     let type = document.getElementById('trailType');
     let trailType = type.value;
-    // document.location.assign(
-    //   "./results.html?q-activities_activity_type_name_eq=" + trailType); 
-    //   await Promise.race([getTrailApi()])
-    //   renderTrail();
+    document.location.assign(
+      "./results.html?trailType=" + trailType); 
+      await Promise.race([getTrailApi()])
+      renderTrail();
     console.log(trailType);
 })
 
