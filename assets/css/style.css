@@ -30,15 +30,18 @@ h3 {
     color: white;
     font-size: 120px;
     text-shadow: 0px 4px 4px var(--black);
+    font-family: 'Amatic SC', cursive;
 }
 
-.logo {
+#logo {
     position: absolute;
-    top: 36%;
+    bottom: 12%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 2;
-    font-family: 'Amatic SC', cursive;
+    height: 100px;
+    width: auto;
+    margin-top: -.6em;
 }
 
 .bnr-text {
@@ -245,10 +248,11 @@ h2 {
     font-size: 30px !important;
 }
 
-.cards-align {
-    display: flex;
-    align-items: center;
+#card-position {
+    margin-left: 3rem !important;
+    margin-right: 3rem !important;
 }
+
 #preferences-container {
     width: 200px !important;
 }
@@ -288,19 +292,58 @@ h2 {
 #grp-size-big {}
 
 
-#logo {
-    height: 100px;
-    width: auto;
+/* ABOUT US CSS GUIDE */
+
+#hero-top {
+    background-color: var(--rust);
+    height: 15.2rem;
+    color: #fff;
+    align-items: center;
+    margin-top: -2.8em !important;
+    /* padding-bottom: 1em !important; */
 }
 
-#logo-container {
-    margin-bottom: -27px;
-    padding-left: 1.4em;
-    padding-bottom: .8em;
+#about-us {
+    font-size: 104px !important;
+}
+
+.treeline {
+    display: inline-flex;
+    margin-top: -10.3rem;
+}
+
+#hero-bottom {
+    margin-top: -3em;
+}
+
+#home-align {
+    align-self: flex-end;
+    margin-right: 6em;
+    margin-top: 1em;
+}
+
+#home-btn {
+    width: 10em;
+    border-radius: 25px;
+
+}
+
+#img-us {
+    margin-left: 1rem;
+}
+
+#img-us:hover {
+    transition: all .2s ease-in-out;
+    transform: scale(1.1);
 }
 
 #about-pics {
     margin-top: 2rem;
-    display: flex;
-    justify-content: space-evenly;
+}
+
+.center-page {
+    position: relative;
+    align-items: center;
+    margin-left: 12rem;
+    margin-bottom: 5rem;
 }
