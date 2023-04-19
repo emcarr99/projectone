@@ -288,39 +288,6 @@ h2 {
 #grp-size-big {}
 
 
-/* COLOR TESTING SITE */
-#color {
-    background-color: #8B7E74;
-}
-
-#color2 {
-    background-color: var(--dark-blue);
-}
-
-#color3 {
-    background-color: var(--dusty-blue);
-}
-
-#color4 {
-    background-color: var(--green);
-}
-
-#color5 {
-    background-color: var(--yellow);
-}
-
-#color9 {
-    background-color: #BB674B;
-}
-
-#color7 {
-    background-color: #CE9061;
-}
-
-#color8 {
-    background-color: #EBC556;
-}
-
 #logo {
     height: 100px;
     width: auto;
@@ -330,4 +297,10 @@ h2 {
     margin-bottom: -27px;
     padding-left: 1.4em;
     padding-bottom: .8em;
+}
+
+#about-pics {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-evenly;
 }
