@@ -12,77 +12,283 @@
     --orange: #CE9061;
 }
 
-#header {
-    background-color: var(--green);
+body {
+    font-family: 'Oswald', sans-serif;
+    ;
 }
 
-#weather-banner {
+#header {
+    background-color: var(--grey);
+    /* margin-bottom: -28px; */
+    height: 26em;
+    align-content: center !important;
+}
+
+h3 {
+    position: relative;
+    text-align: center;
+    color: white;
+    font-size: 120px;
+    text-shadow: 0px 4px 4px var(--black);
+}
+
+.logo {
+    position: absolute;
+    top: 36%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    font-family: 'Amatic SC', cursive;
+}
+
+/* #weather-banner {
     background-color: #567189;
     height: 20px;
-    padding-top: -5px;
     border-radius: 0%;
     color: antiquewhite;
+    text-align: justify;
+} */
+
+.bnr-text {
+    justify-content: center !important;
+    margin-top: -12px !important;
 }
 
-#diet {
-
+/* (A) FIXED WRAPPER */
+.hwrap {
+    overflow: hidden;
+    /* HIDE SCROLL BAR */
+    background: #567189;
+    color: antiquewhite;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    font-size: 30px;
 }
 
-#diet-none {
-
+/* (B) MOVING TICKER WRAPPER */
+.hmove {
+    display: flex;
+    margin-right: 33rem;
+    margin-left: 30rem;
 }
 
-#diet-dairy {
-
+/* (C) ITEMS - INTO A LONG HORIZONTAL ROW */
+.hitem {
+    flex-shrink: 0;
+    width: 100%;
+    box-sizing: border-box;
+    align-items: center;
+    text-align: center;
 }
 
-#diet-gluten {
-
+#time-ticker {
+    align-items: center;
 }
 
-#diet-nuts {
+/* (D) ANIMATION - MOVE ITEMS FROM RIGHT TO LEFT */
+/* 4 ITEMS -400%, CHANGE THIS IF YOU ADD/REMOVE ITEMS */
+@keyframes tickerh {
+    0% {
+        transform: translate3d(100%, 0, 0);
+    }
 
+    100% {
+        transform: translate3d(-400%, 0, 0);
+    }
 }
 
-#pace {
-
+.hmove {
+    animation: tickerh linear 60s infinite;
 }
 
-#pace-surprise {
-
+.hmove:hover {
+    animation-play-state: paused;
 }
 
-#pace-easy {
-
+.weather-widget {
+    width: 330px;
+    position: absolute;
+    right: 0;
+    background-color: #567189;
+    z-index: 4;
+    margin-bottom: -72px;
 }
 
-#pace-medium {
+/* .weather-container {
+    float: left;
+} */
 
+/* @media only screen and (max-width: 768px) {
+    .hmove {
+        animation-duration: 60s;
+    }
+} */
+
+/* HERO IMAGE SLIDER */
+
+.slider {
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+    position: relative;
 }
 
-#pace-hard {
-
+.slider .slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    animation: slider 35.2s infinite;
 }
 
-#grp-size {
-
+.slider .slide:nth-child(1) {
+    background-image: url('/assets/images/Trail1.png');
+    animation-delay: 0s;
 }
 
-#grp-size-solo {
-
+.slider .slide:nth-child(2) {
+    background-image: url('/assets/images/Trail2.png');
+    animation-delay: -4.4s;
 }
 
-#grp-size-date {
-
+.slider .slide:nth-child(3) {
+    background-image: url('/assets/images/Trail3.png');
+    animation-delay: -8.8;
 }
 
-#grp-size-5 {
-
+.slider .slide:nth-child(4) {
+    background-image: url('');
+    animation-delay: -13.2s;
 }
 
-#grp-size-big {
-
+.slider .slide:nth-child(5) {
+    background-image: url('/assets/images/Trail5.png');
+    animation-delay: -17.6s;
 }
+
+.slider .slide:nth-child(6) {
+    background-image: url('/assets/images/Trail6.png');
+    animation-delay: -22s;
+}
+
+.slider .slide:nth-child(7) {
+    background-image: url('/assets/images/Trail7.png');
+    animation-delay: -26.4s;
+}
+
+.slider .slide:nth-child(8) {
+    background-image: url('/assets/images/Trail8.png');
+    animation-delay: -30.8s;
+}
+
+
+@keyframes slider {
+
+    0%,
+    18%,
+    100% {
+        opacity: 1;
+        animation-timing-function: ease;
+        z-index: 0;
+    }
+
+    20% {
+        opacity: 0;
+        animation-timing-function: step-end;
+        z-index: 0;
+    }
+
+    98% {
+        opacity: 1;
+        animation-timing-function: step-end;
+        z-index: -1;
+    }
+}
+
+.navbar-item {
+    font-size: 24px;
+}
+
+.navbar-logo {
+    position: relative;
+    margin-left: 2em;
+    margin-right: 1.7em;
+    padding-top: .84em;
+}
+
+.navbar-logo:hover {
+    cursor: context-menu;
+}
+
+h1 {
+    position: relative;
+    text-align: center;
+    font-family: 'Amatic SC', cursive;
+    font-size: 78px !important;
+    padding-bottom: 20px;
+}
+
+h2 {
+    position: relative;
+    text-align: center;
+    font-size: 36px !important;
+}
+
+#snd-description {
+    position: relative;
+    margin-top: -6.8rem !important;
+}
+
+#how-it-works {
+    position: relative;
+    text-align: center;
+    font-size: 30px !important;
+}
+
+.cards-align {
+    display: flex;
+    align-items: center;
+}
+#preferences-container {
+    width: 38rem !important;
+}
+
+#past-searches-container {
+    width: 38rem !important;
+}
+
+#diet {}
+
+#diet-none {}
+
+#diet-dairy {}
+
+#diet-gluten {}
+
+#diet-nuts {}
+
+#pace {}
+
+#pace-surprise {}
+
+#pace-easy {}
+
+#pace-medium {}
+
+#pace-hard {}
+
+#grp-size {}
+
+#grp-size-solo {}
+
+#grp-size-date {}
+
+#grp-size-5 {}
+
+#grp-size-big {}
 
 
 /* COLOR TESTING SITE */
@@ -116,4 +322,15 @@
 
 #color8 {
     background-color: #EBC556;
+}
+
+#logo {
+    height: 100px;
+    width: auto;
+}
+
+#logo-container {
+    margin-bottom: -27px;
+    padding-left: 1.4em;
+    padding-bottom: .8em;
 }
