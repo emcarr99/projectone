@@ -63,7 +63,17 @@ $(document).ready(function () {
       .catch((err) => console.error(err));
   }
 
-  async function getSnackApi() {}
+  async function getSnackApi(dietType) {
+     let recipeResults = await fetch(
+       "https://api.edamam.com/api/recipes/v2?type=public&app_id=6e31f74f&app_key=d2f7dc250b26add1c1083d4f189e78d8&mealType=snack&health=" +
+         dietType
+     );
+
+    let recipeList = await recipeResults.json();
+    console.log(recipeList);
+
+    renderSnack(recipeList);
+  }
 
   function renderTrail(trailResults) {
     // console.log("it works")
@@ -72,22 +82,44 @@ $(document).ready(function () {
     //   trailCards[i].innerHTML = "";
     //   let trailName = 
     // }
-    const keys = Object.keys(trailResults);
+    // const keys = Object.keys(trailResults);
 
-    for (let i = 0; i < 10 && i < keys.length; i++) {
-      const key = keys[i];
-      const item = trailResults[key];
-      // Render the item with its unique key as the key
-      console.log(`<div key="${key}">
-              <h2>${item.name}</h2>
-              <p>${item.description}</p>
-            </div>`);
+    // for (let i = 0; i < 10 && i < keys.length; i++) {
+    //   const key = keys[i];
+    //   const item = trailResults[key];
+    //   // Render the item with its unique key as the key
+    //   console.log(`<div key="${key}">
+    //           <h2>${item.name}</h2>
+    //           <p>${item.description}</p>
+    //         </div>`);
 
-    }
+    // }
   }
 
 
-  function renderSnack(snackResults) {}
+  function renderSnack(snackResults) {
+    let recipeCards = document.querySelectorAll(".recipeCard");
+    for (var i = 0; i < recipeCards.length; i++) {
+      recipeCards[i].innerHTML= "";
+      // sets 
+      let snackPic = snackResults.hits[i].recipe.image;
+      let snackPicEl = document.createElement("img");
+      snackPicEl.setAttribute("src", snackPic);
+      recipeCards[i].append(snackPicEl);
+
+      let snackName = snackResults.hits[i].recipe.label;
+      let snackNameEl = document.createElement("p");
+      snackNameEl.innerHTML = snackName;
+      recipeCards[i].append(snackNameEl);
+
+      let snackLink = snackResults.hits[1].recipe.shareAs;
+      let snackLinkEl = document.createElement("a");
+      snackLinkEl.setAttribute("href", snackLink);
+      snackLinkEl.innerHTML = "See full recipe";
+      recipeCards[i].append(snackLinkEl);
+    }
+
+  }
 
   getValues();
 });
