@@ -17,6 +17,7 @@ var clearButton = document.querySelector("#modal-btn");
 
 var modal = document.querySelector(".modal");
 
+var reset =document.querySelector("#reset")
 //var closeModal = document.querySelector("#mod-clear")
 //dropdowns.forEach(dietaryRestrictions => {
 const dietNone = document.querySelector("diet-none");
@@ -38,6 +39,12 @@ const grpDate = document.querySelector("grp-size-date");
 const grpBig = document.querySelector("grp-size-5");
 const grpHuge = document.querySelector("grp-size-big");
 //})
+
+reset.addEventListener("click", function (event) {
+    console.log("resetting")
+var select =document.querySelector("#diet");
+select.value= " ";
+})
 
 footerButton.addEventListener("click", function (event) {
     var options = document.querySelectorAll("option")
