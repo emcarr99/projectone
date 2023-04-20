@@ -105,6 +105,13 @@
                         Activity Preferences
                     </p>
                 </header>
+<form id="trailForm">
+    <label for="cityInput">City:</label>
+    <input type="text" id="cityInput" name="city" placeholder="Enter city name">
+    <br>
+    <label for="stateInput">State:</label>
+    <input type="text" id="stateInput" name="state" placeholder="Enter state name">
+    <br>
 
                 <div class="card-content columns">
                     <div class="field column">
@@ -197,29 +204,40 @@
     </div>
 
     <!-- CLEAR HISTORY MODAL HANDLER -->
+
     <div class="modal" id="main-model">
         <div class="modal-background"></div>
         <div class="modal-card">
             <header class="modal-card-head">
-                <p class="modal-card-title">Modal title</p>
+                <p class="modal-card-title" id="modal-head">Clear Search History?</p>
+                <button class="delete" aria-label="close"></button>
+            </header>
                 <!-- CONNECT MODAL CLEAR WITH JS CALL + SCRIPT -->
-                <button class="js-modal-trigger" id="mod-clear" data-target="mod-clear"></button>
-                <section class="modal-card-body">
-                    <!-- Content ... -->
+                <div id="hide">
+                <button class="js-modal-trigger" id="mod-clear" data-target="mod-clear">Yes!</button>
+                </div>
+                <section class="modal-card-body" id="modal-content">
+                    <b>Are you sure?</b> <br>
+                    Once you delete your search history, it ain't comin' back...
                 </section>
-                <footer class="modal-card-foot">
-                    <button class="button is-success" id="reset">reset</button>
-                    <button class="button">Cancel</button>
+                <footer class="modal-card-foot" id="modal-foot">
+                    <button class="button is-success" id="reset">Clear it!</button>
+                    <button class="button is-danger" id="clear">Don't Clear!</button>
                 </footer>
         </div>
     </div>
+
+<footer class="footer">
+    <div class="content has-text-centered">
+        <p class="copyright">🔆 &#169 2023 | UT Coding Bootcamp Team 1 WebDev 🔆</p>
+    </div>
+</footer>
+
 </body>
 
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 
 <script src="assets/js/script.js"></script>
-<!-- Compressed JavaScript -->
-<!-- jQuery -->
 
 <!-- Day.js -->
 <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"

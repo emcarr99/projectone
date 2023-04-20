@@ -240,6 +240,7 @@ h2 {
 #snd-description {
     position: relative;
     margin-top: -6.8rem !important;
+    margin-bottom: -4rem !important;
 }
 
 #how-it-works {
@@ -346,4 +347,53 @@ h2 {
     align-items: center;
     margin-left: 12rem;
     margin-bottom: 5rem;
+}
+
+.copyright {
+    font-size: 20px !important;
+    font-weight: bold;
+}
+
+#modal-head {
+    text-align: center !important;
+    align-items: center !important;
+    justify-content: center;
+    font-size: 32px;
+}
+
+#modal-foot {
+    text-align: center !important;
+    align-items: center !important;
+    justify-content: center;
+}
+
+#modal-content {
+    font-size: 24px !important;
+    text-align: center;
+}
+
+#reset {
+    font-size: 18px !important;
+}
+
+#reset:hover {
+    text-shadow: 0px 2px 2px var(--black);
+    box-shadow: 3px 3px 2px var(--grey);
+}
+
+#clear {
+    font-size: 18px !important;
+}
+
+#clear:hover {
+    text-shadow: 0px 2px 2px var(--black);
+    box-shadow: 3px 3px 2px var(--grey);
+}
+
+#hide {
+    display: none;
+}
+
+#about-foot {
+    background-color: #fff !important;
 }
