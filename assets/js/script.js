@@ -42,8 +42,12 @@ const grpHuge = document.querySelector("grp-size-big");
 
 reset.addEventListener("click", function (event) {
     console.log("resetting")
-var select =document.querySelector("#diet");
-select.value= " ";
+var noDiet =document.querySelector("#diet");
+var noTrail =document.querySelector("#trailType");
+var noGrpsize =document.querySelector("#size-of-grp");
+noDiet.value= " ";
+noTrail.value=" ";
+noGrpsize.value=" ";
 })
 
 footerButton.addEventListener("click", function (event) {

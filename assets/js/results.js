@@ -52,7 +52,7 @@ $(document).ready(function () {
     };
 console.log(trailType)
     fetch(
-      "https://trailapi-trailapi.p.rapidapi.com/activity/?lat=30.36697&lon=-97.78647&q-city_cont=Austin&q-country_cont=United%20States&q-state_cont=Texasradius&q-activities_activity_type_name_eq=" +
+      "https://trailapi-trailapi.p.rapidapi.com/activity/?lat=30.36697&lon=-97.78647&q-city_cont=Austin&q-country_cont=United%20States&q-state_cont=Texas&radius=25&q-activities_activity_type_name_eq=" +
         trailType,
       options
     )
