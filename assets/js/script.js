@@ -13,6 +13,12 @@ var dietaryRestrictions = document.getElementById("diet");
 
 var groupSize = document.getElementById("grp-size");
 
+var clearButton = document.querySelector("#modal-btn");
+
+var modal = document.querySelector(".modal");
+
+var reset =document.querySelector("#reset")
+//var closeModal = document.querySelector("#mod-clear")
 //dropdowns.forEach(dietaryRestrictions => {
 const dietNone = document.querySelector("diet-none");
 const dietDairy = document.querySelector("diet-dairy");
@@ -33,6 +39,16 @@ const grpDate = document.querySelector("grp-size-date");
 const grpBig = document.querySelector("grp-size-5");
 const grpHuge = document.querySelector("grp-size-big");
 //})
+
+reset.addEventListener("click", function (event) {
+    console.log("resetting")
+var noDiet =document.querySelector("#diet");
+var noTrail =document.querySelector("#trailType");
+var noGrpsize =document.querySelector("#size-of-grp");
+noDiet.value= " ";
+noTrail.value=" ";
+noGrpsize.value=" ";
+})
 
 footerButton.addEventListener("click", function (event) {
     var options = document.querySelectorAll("option")
@@ -57,6 +73,55 @@ $("#searchBtn").on('click', async () => {
 })
 
 
+//document.addEventListener('DOMContentLoaded', () => {/
+    console.log("loading?")
+    // Functions to open and close a modal
+    function openModal($el) {
+        console.log("open")
+      $el.classList.add('is-active');
+    }
+  
+    function closeModal($el) {
+        console.log("close")
+      $el.classList.remove('is-active');
+    }
+  
+    function closeAllModals() {
+      (document.querySelectorAll('.modal') || []).forEach(($modal) => {
+        closeModal($modal);
+      });
+    }
+  
+    // Add a click event on buttons to open a specific modal
+    (document.querySelectorAll('.js-modal-trigger') || []).forEach(($trigger) => {
+        console.log("hello!")
+      const modal = $trigger.dataset.target;
+      const $target = document.getElementById(modal);
+  
+      $trigger.addEventListener('click', () => {
+        openModal($target);
+      });
+    });
+  
+    // Add a click event on various child elements to close the parent modal
+    (document.querySelectorAll('.modal-background, .modal-close, .modal-card-head .delete, .modal-card-foot .button') || []).forEach(($close) => {
+     const $target = $close.closest('.modal');
+  //const $target = $(".modal")
+  console.log(closeModal)
+      $close.addEventListener('click', () => {
+        closeModal($target);
+      });
+    });
+  
+    // Add a keyboard event to close all modals
+    document.addEventListener('keydown', (event) => {
+      const e = event || window.event;
+  
+      if (e.keyCode === 27) { // Escape key
+        closeAllModals();
+      }
+    });
+  });
 
 
 
@@ -67,6 +132,4 @@ $("#searchBtn").on('click', async () => {
 
 
 
-
-
-})
+//})

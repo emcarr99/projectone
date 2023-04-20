@@ -30,8 +30,7 @@
                 <div class="slide"></div>
                 <div class="slide"></div>
                 <div class="slide"></div>
-            </div>
-            <h3 class="logo">Snack n' Dash</h3>
+            <h3 class="logo" id="logo">Snack n' Dash</h3>
             </div>
         </section>
 
@@ -69,11 +68,9 @@
                 </a>
 
                 <div class="navbar-dropdown">
-                    <a class="navbar-item">About the Developers</a>
+                    <a class="navbar-item" href="/aboutus.html">About the Developers</a>
                     <hr class="navbar-divider">
-                    <a class="navbar-item">
-                        Contact
-                    </a>
+                    <a class="navbar-item" href="mailto: YourMom@naaahhhh.com">Contact</a>
                 </div>
             </div>
 
@@ -99,7 +96,7 @@
 
 
     <!-- CARD: CONTAINER TO SET SEARCH PREFERENCES -->
-    <div class="columns">
+    <div class="columns" id="card-position">
         <div class="container column" id="preferences-container">
             <section notification is-primary></section>
             <div class="card">
@@ -113,24 +110,25 @@
                     <div class="field column">
                         <label class="label">Do you have any dietary preferences?</label>
                         <div class="control">
-                            <div class="select" id="diet">
-                                <select>
-                                    <option id="diet-none" value="" disabled="" selected="">None</option>
+                            <div class="select">
+                                <select required id="diet">
+                                    <option value="" disabled selected hidden>Select</option>
+                                    <option id="diet-none" value="" >None</option>
                                     <option id="diet-dairy" value="dairy-free">No dairy</option>
                                     <option id="diet-gluten" value="gluten-free">No gluten</option>
                                     <option id="diet-nuts" value="peanut-free">No nuts</option>
-                                    <option id="diet-keto" value="keto-friendly">None</option>
-                                    <option id="diet-vegan" value="vegan">Option 1</option>
-                                    <option id="diet-vegetarian" value="vegetarian">Option 2</option>
-                                    <option id="diet-nuts">Option 3</option>
+                                    <option id="diet-keto" value="keto-friendly">Keto</option>
+                                    <option id="diet-vegan" value="vegan">Vegan</option>
+                                    <option id="diet-vegetarian" value="vegetarian">Vegetarian</option>
                                 </select>
                             </div>
 
-                            <label class="label">Trail Type</label>
+                            <label class="label"><br>Trail Type</label>
                             <div class="control">
                                 <div class="select" id="pace">
                                     <select name="trailType" id="trailType">
-                                        <option id="trail-any" value="" disabled="" selected="">Surprise me! I'm down
+                                        <option value="" disabled selected hidden>Select</option>
+                                        <option id="trail-any" value="">Surprise me! I'm down
                                             for anything.</option>
                                         <option id="trail-hike" value="hiking">Hiking</option>
                                         <option id="trail-biking" value="mountain biking">Mountain Biking</option>
@@ -140,10 +138,12 @@
                                 </div>
                             </div>
 
-                            <label class="label">Group Size</label>
+                            <label class="label"><br>Group Size</label>
                             <div class="control">
                                 <div class="select" id="grp-size">
-                                    <select>
+                                    <select id="size-of-grp">
+                                        <option value="" disabled selected hidden>Select</option>
+                                        <option id="grp-size-unsure" value="">Not sure yet</option>
                                         <option id="grp-size-solo">Solo</option>
                                         <option id="grp-size-date">Date</option>
                                         <option id="grp-size-5">Group of 5</option>
@@ -190,14 +190,14 @@
 
                 <footer class="card-footer">
                     <!-- <button class="card-footer-item" onclick="window.location.href='/results.html'">Save!</button> -->
-                    <button class="card-footer-item">Clear Saved Searches</button>
+                    <button class="card-footer-item js-modal-trigger" data-target="main-model" id="modal-btn ">Clear Saved Searches</button>
                 </footer>
             </div>
         </div>
     </div>
 
     <!-- CLEAR HISTORY MODAL HANDLER -->
-    <div class="modal">
+    <div class="modal" id="main-model">
         <div class="modal-background"></div>
         <div class="modal-card">
             <header class="modal-card-head">
@@ -208,23 +208,24 @@
                     <!-- Content ... -->
                 </section>
                 <footer class="modal-card-foot">
-                    <button class="button is-success">Save changes</button>
+                    <button class="button is-success" id="reset">reset</button>
                     <button class="button">Cancel</button>
                 </footer>
         </div>
     </div>
+</body>
 
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 
-    <script src="assets/js/script.js"></script>
-    <!-- Compressed JavaScript -->
-    <!-- jQuery -->
+<script src="assets/js/script.js"></script>
+<!-- Compressed JavaScript -->
+<!-- jQuery -->
 
-    <!-- Day.js -->
-    <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"
-        integrity="sha256-iu/zLUB+QgISXBLCW/mcDi/rnf4m4uEDO0wauy76x7U=" crossorigin="anonymous"></script>
+<!-- Day.js -->
+<script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"
+    integrity="sha256-iu/zLUB+QgISXBLCW/mcDi/rnf4m4uEDO0wauy76x7U=" crossorigin="anonymous"></script>
 
-    <script src="./assets/js/timetick.js"></script>
+<script src="./assets/js/timetick.js"></script>
 
 </body>
 
