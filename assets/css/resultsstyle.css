@@ -57,9 +57,8 @@
     --orange: #CE9061;
 }
 
-.body, .footer {
-    background-color: #374045;
-}
+
+
 .section {
    
     color: black;
@@ -74,7 +73,7 @@ background-color: #567189;
 }
 
 #dashes {
-background-color: #f6e0b5;
+background-color: #374045;
 }
 
 .left-logo {
@@ -86,10 +85,11 @@ background-color: #f6e0b5;
 }
 
 
- .headerforsnd {
-    color:  #BB674B;
+.headerforsnd {
+    color: whitesmoke;
     font-size: 25px;
-    font-weight: 300;
+    font-weight: 350;
+    margin-bottom: 20px;
 }
 
 .navbar-item {
@@ -104,4 +104,9 @@ background-color: #f6e0b5;
     color: #000;
 }
 
-/*test*/
+.trail-name {
+    font-weight: bold;
+    color: white;
+    /* Add other styling properties here */
+}
+
