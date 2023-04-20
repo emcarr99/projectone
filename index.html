@@ -189,14 +189,14 @@
 
                 <footer class="card-footer">
                     <!-- <button class="card-footer-item" onclick="window.location.href='/results.html'">Save!</button> -->
-                    <button class="card-footer-item" id="modal-btn">Clear Saved Searches</button>
+                    <button class="card-footer-item js-modal-trigger" data-target="main-model" id="modal-btn ">Clear Saved Searches</button>
                 </footer>
             </div>
         </div>
     </div>
 
     <!-- CLEAR HISTORY MODAL HANDLER -->
-    <div class="modal">
+    <div class="modal" id="main-model">
         <div class="modal-background"></div>
         <div class="modal-card">
             <header class="modal-card-head">
@@ -212,7 +212,6 @@
                 </footer>
         </div>
     </div>
-
 </body>
 
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>

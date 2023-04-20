@@ -57,7 +57,10 @@ $(document).ready(function () {
       options
     )
       .then((trailResults) => trailResults.json())
-      .then((trailResults) => console.log(trailResults))
+      .then((trailResults) => {
+        console.log(Object.values(trailResults))
+        return trailResults;
+      })
       .then((trailResults) => renderTrail(trailResults))
       
       .catch((err) => console.error(err));
@@ -76,24 +79,24 @@ $(document).ready(function () {
   }
 
   function renderTrail(trailResults) {
-    // console.log("it works")
-    // const trailCards = document.querySelectorAll(".trailCard");
-    // for (var i = 0; i < trailCards.length; i++) {
-    //   trailCards[i].innerHTML = "";
-    //   let trailName = 
-    // }
-    // const keys = Object.keys(trailResults);
+    console.log("it works")
+    const trailCards = document.querySelectorAll(".trailCard");
+    for (var i = 0; i < trailCards.length; i++) {
+      trailCards[i].innerHTML = "";
+      //let trailName = 
+    }
+    const keys = Object.keys(trailResults);
 
-    // for (let i = 0; i < 10 && i < keys.length; i++) {
-    //   const key = keys[i];
-    //   const item = trailResults[key];
-    //   // Render the item with its unique key as the key
-    //   console.log(`<div key="${key}">
-    //           <h2>${item.name}</h2>
-    //           <p>${item.description}</p>
-    //         </div>`);
+    for (let i = 0; i < 5 && i < keys.length; i++) {
+      const key = keys[i];
+      const item = trailResults[key];
+      // Render the item with its unique key as the key
+      trailCards[i].innerHTML= (`<div id="${key}">
+              <h2>${item.name}</h2>
+              <p>${item.description}</p>
+            </div>`);
 
-    // }
+     }
   }
 
 
