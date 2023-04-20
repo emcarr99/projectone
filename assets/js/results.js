@@ -1,73 +1,56 @@
 $(document).ready(function () {
   const apiKey = "ae491393c8msh4acba715ebb33ebp1addcajsn3f334bdd5e78";
 
-  // Get the user's current location
-  // navigator.geolocation.getCurrentPosition((position) => {
-  //   const latitude = position.coords.latitude;
-  //   const longitude = position.coords.longitude;
-
-  //   // Make a request to TrailAPI to find trails near the user's location
-  //   fetch(
-  //     `https://trailapi-trailapi.p.rapidapi.com/trails/explore/?lat=${latitude}&lon=${longitude}`,
-  //     {
-  //       method: "GET",
-  //       headers: {
-  //         "x-rapidapi-key": apiKey,
-  //         "x-rapidapi-host": "trailapi-trailapi.p.rapidapi.com",
-  //       },
-  //     }
-  //   )
-  //     .then((response) => response.json())
-  //     .then((data) => {
-  //       // Process the data returned by the API
-  //       console.log(data);
-  //     })
-  //     .catch((error) => {
-  //       console.error(error);
-  //     });
-  // });
   var results = JSON.parse(localStorage.getItem("choices"));
-  // console.log(results);
+  console.log(results);
 
-  function getValues() {
+  // async function to receive values from search specifications
+  async function getValues() {
     let searchValues = document.location.search.split("&");
     console.log(searchValues);
 
     let trailType = searchValues[0].split("=").pop();
     let dietType = searchValues[1].split("=").pop();
 
-    getTrailApi(trailType);
-    console.log(trailType);
-    getSnackApi(dietType);
+    // Fetch and render snack API first
+    await getSnackApi(dietType);
     console.log(dietType);
+
+    // Fetch and render trail API second
+    await getTrailApi(trailType);
+    console.log(trailType);
   }
 
-  async function getTrailApi(trailType) {
-    const options = {
-      method: "GET",
-      headers: {
-        "X-RapidAPI-Key": "ae491393c8msh4acba715ebb33ebp1addcajsn3f334bdd5e78",
-        "X-RapidAPI-Host": "trailapi-trailapi.p.rapidapi.com",
-      },
-    };
-console.log(trailType)
-    fetch(
-      "https://trailapi-trailapi.p.rapidapi.com/activity/?lat=30.36697&lon=-97.78647&q-city_cont=Austin&q-country_cont=United%20States&q-state_cont=Texas&radius=25&q-activities_activity_type_name_eq=" +
-        trailType,
-      options
-    )
-      .then((trailResults) => trailResults.json())
-      .then((trailResults) => {
-        console.log(trailResults)
-        console.log(Object.values(trailResults))
-       return Object.values(trailResults);
-        // return trailResults;
-      })
-      .then((trailResults) => renderTrail(trailResults))
-      
-      .catch((err) => console.error(err));
-  }
+async function getTrailApi(trailType) {
+  // Get user input values
+  const city = document.getElementById("cityInput").value;
+  const state = document.getElementById("stateInput").value;
+  const trailType = document.getElementById("trailType").value;
 
+  const options = {
+    method: "GET",
+    headers: {
+      "X-RapidAPI-Key": "ae491393c8msh4acba715ebb33ebp1addcajsn3f334bdd5e78",
+      "X-RapidAPI-Host": "trailapi-trailapi.p.rapidapi.com",
+    },
+  };
+
+  // Use user input values in API URL
+  const url = `https://trailapi-trailapi.p.rapidapi.com/activity/?lat=30.36697&lon=-97.78647&q-city_cont=${city}&q-country_cont=United%20States&q-state_cont=${state}&radius=25&q-activities_activity_type_name_eq=${trailType}`;
+
+  fetch(url, options)
+    .then((trailResults) => trailResults.json())
+    .then((trailResults) => {
+      console.log(trailResults);
+      console.log(Object.values(trailResults));
+      // needed to get the individual trail names 
+      return Object.values(trailResults);
+    })
+    .then((trailResults) => renderTrail(trailResults))
+    .catch((err) => console.error(err));
+}
+
+// fetches the snack recipes
   async function getSnackApi(dietType) {
      let recipeResults = await fetch(
        "https://api.edamam.com/api/recipes/v2?type=public&app_id=6e31f74f&app_key=d2f7dc250b26add1c1083d4f189e78d8&mealType=snack&dishType=biscuits%20and%20cookies&health=" +
@@ -79,13 +62,13 @@ console.log(trailType)
 
     renderSnack(recipeList);
   }
-
+// renders trail list on the results page
   function renderTrail(trailResults) {
     console.log("it works")
     const trailCards = document.querySelectorAll(".trailCard");
     for (var i = 0; i < trailCards.length; i++) {
       trailCards[i].innerHTML = "";
-      //let trailName = 
+      
     }
     const keys = Object.keys(trailResults);
 
@@ -94,19 +77,19 @@ console.log(trailType)
       const item = trailResults[key];
       // Render the item with its unique key as the key
       trailCards[i].innerHTML= (`<div id="${key}">
-              <h2>${item.name}</h2>
+              <h1>${item.name}</h1>
               <p>${item.description}</p>
             </div>`);
 
      }
   }
 
-
+// renders snack results on results page
   function renderSnack(snackResults) {
     let recipeCards = document.querySelectorAll(".recipeCard");
     for (var i = 0; i < recipeCards.length; i++) {
       recipeCards[i].innerHTML= "";
-      // sets 
+      
       let snackPic = snackResults.hits[i].recipe.image;
       let snackPicEl = document.createElement("img");
       snackPicEl.setAttribute("src", snackPic);
