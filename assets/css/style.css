@@ -150,7 +150,7 @@ h3 {
 
 .slider .slide:nth-child(3) {
     background-image: url('/assets/images/Trail3.png');
-    animation-delay: -8.8;
+    animation-delay: -8.8s;
 }
 
 .slider .slide:nth-child(4) {
@@ -177,6 +177,7 @@ h3 {
     background-image: url('/assets/images/Trail8.png');
     animation-delay: -30.8s;
 }
+
 
 
 @keyframes slider {
@@ -364,7 +365,7 @@ ul {
 }
 
 .treeline {
-    display: block;
+    display: flex;
     margin-top: -2.8em;
     justify-content: center;
     min-width: none;
@@ -379,9 +380,10 @@ ul {
 }
 
 #blurb {
-    text-align: center;
+    text-align: center !important;
     font-size: 23px;
     padding-top: 30px;
+    width: 100%;
 }
 
 #hero-bottom {
@@ -429,6 +431,7 @@ ul {
 }
 
 .bio-pics {
+    flex-wrap: wrap;
     margin-bottom: 5rem;
     width: 100%;
 }

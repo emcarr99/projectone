@@ -38,20 +38,23 @@ footerButton.addEventListener("click", function (event) {
 //var results= localStorage.getItem("choices")
 localStorage.setItem("choices", JSON.stringify(results));
 })
+
 // using async function to use a promise to pass in parameters
 $("#searchBtn").on("click", async () => {
   let type = document.getElementById("trailType").value;
   let diet = document.getElementById("diet").value;
-  let city = document.getElementById("cityInput").value;
-  let state = document.getElementById("stateInput").value;
   document.location.assign(
-    `./results.html?city=${city}&state=${state}&trailType=${trailType}&diet=${diet}`
+    "./results.html?trailType=" + type + "&diet=" + diet
   );
   await Promise.race([getTrailApi(), getSnackApi()]);
   renderTrail();
 
   console.log(type, diet);
 });
+
+
+
+
 
 
 //document.addEventListener('DOMContentLoaded', () => {/
