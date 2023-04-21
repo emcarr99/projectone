@@ -1,54 +1,10 @@
 // entire page should be inside of this function
 $(document).ready(function () {
 
-var headerButton = document.querySelector(".card-header-icon");
-
 var footerButton = document.querySelector(".card-footer-item");
 
-var dropdowns = document.querySelectorAll("select");
-
-var pace = document.getElementById("pace");
-
-var dietaryRestrictions = document.getElementById("diet");
-
-var groupSize = document.getElementById("grp-size");
-
-var clearButton = document.querySelector("#modal-btn");
-
-var modal = document.querySelector(".modal");
-
-var reset =document.querySelector("#reset")
-
-//var closeModal = document.querySelector("#mod-clear")
-//dropdowns.forEach(dietaryRestrictions => {
-const dietNone = document.querySelector("diet-none");
-const dietDairy = document.querySelector("diet-dairy");
-const dietGluten = document.querySelector("diet-gluten");
-const dietNuts = document.querySelector("diet-nuts");
-//})
-
-//dropdowns.forEach(pace => {
-const paceSurprise = document.querySelector("pace-surprise");
-const paceEasy = document.querySelector("pace-easy");
-const paceMedium = document.querySelector("pace-medium");
-const paceHard = document.querySelector("pace-hard");
-//})
-
-//dropdowns.forEach(groupSize => {
-const solo = document.querySelector("grp-size-solo");
-const grpDate = document.querySelector("grp-size-date");
-const grpBig = document.querySelector("grp-size-5");
-const grpHuge = document.querySelector("grp-size-big");
-//})
 reset.addEventListener("click", function (event) {
     console.log("resetting")
-var noDiet =document.querySelector("#diet-default");
-var noTrail =document.querySelector("#trail-default");
-var noGrpsize =document.querySelector("#grpsz-default");
-noDiet.value= " ";
-noTrail.value=" ";
-noGrpsize.value=" ";
-
 var content = JSON.parse(localStorage.getItem("choices"));
 if (content[0] && content[0].length > 0){
   console.log(content[0]);
@@ -56,7 +12,7 @@ if (content[0] && content[0].length > 0){
   dietaryPreference.innerHTML=(content[0]); 
 }
   if (content[1] && content[1].length > 0){
-  console.log(content[1]);
+    console.log(content[1]);
   var trailType = document.getElementById("display-text2");
   trailType.innerHTML=(content[1]); 
   }
