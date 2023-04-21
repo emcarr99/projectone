@@ -14,7 +14,6 @@
 
 body {
     font-family: 'Oswald', sans-serif;
-    ;
 }
 
 #header {
@@ -227,25 +226,37 @@ h1 {
     position: relative;
     text-align: center;
     font-family: 'Amatic SC', cursive;
-    font-size: 78px !important;
+    font-size: 90px !important;
     padding-bottom: 20px;
 }
 
 h2 {
     position: relative;
     text-align: center;
-    font-size: 36px !important;
+    font-size: 40px !important;
 }
 
 #snd-description {
     position: relative;
     margin-top: -6.8rem !important;
+    margin-bottom: -4rem !important;
+}
+
+#break-ht {
+    line-height: 11px;
 }
 
 #how-it-works {
     position: relative;
     text-align: center;
-    font-size: 30px !important;
+    font-size: 38px !important;
+    line-height: 1.6em;
+}
+
+ul {
+    text-align: center;
+    font-size: 33px;
+    line-height: 1.7em;
 }
 
 #card-position {
@@ -254,11 +265,55 @@ h2 {
 }
 
 #preferences-container {
-    width: 200px !important;
+    width: 180px !important;
 }
 
 #past-searches-container {
-    width: 200px !important;
+    width: 180px !important;
+}
+
+#trailForm {
+    align-items: center;
+}
+
+.card-header {
+    font-size: 22px;
+    background-color: #8b7e74ef;
+    letter-spacing: 1px;
+}
+
+#card-header-pref {
+    background-color: #8b7e74a7 !important;
+}
+
+#searchBtn {
+    font-size: 17px;
+    font-family: Oswald, sans-serif;
+    letter-spacing: 1px;
+}
+
+#searchBtn:hover {
+    cursor: pointer;
+    background-color: var(--yellow);
+    font-size: 19px;
+    font-weight: bold;
+}
+
+#modal-btn {
+    font-size: 17px;
+    font-family: Oswald, sans-serif;
+    letter-spacing: 1px;
+}
+
+#modal-btn:hover {
+    cursor: pointer;
+    background-color: var(--yellow);
+    font-size: 19px;
+    font-weight: bold;
+}
+
+.label {
+    font-size: 19px;
 }
 
 #diet {}
@@ -305,11 +360,28 @@ h2 {
 
 #about-us {
     font-size: 104px !important;
+    letter-spacing: 1px;
 }
 
 .treeline {
-    display: inline-flex;
-    margin-top: -10.3rem;
+    display: block;
+    margin-top: -2.8em;
+    justify-content: center;
+    min-width: none;
+}
+
+#dev-name {
+    font-size: 26px;
+}
+
+#dev-github {
+    font-size: 21px;
+}
+
+#blurb {
+    text-align: center;
+    font-size: 23px;
+    padding-top: 30px;
 }
 
 #hero-bottom {
@@ -318,18 +390,33 @@ h2 {
 
 #home-align {
     align-self: flex-end;
-    margin-right: 6em;
+    margin-right: 18em;
     margin-top: 1em;
 }
 
 #home-btn {
     width: 10em;
     border-radius: 25px;
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 1px;
+    font-size: 20px;
+}
 
+#home-btn:hover {
+    background-color: var(--dusty-blue);
+    color: var(--white);
+    letter-spacing: 2px;
+    font-size: 21px;
+    font-weight: bolder;
+    border: 2px solid #000;
 }
 
 #img-us {
-    margin-left: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: .5rem;
+    margin-right: .5rem;
+    min-width: 340px;
 }
 
 #img-us:hover {
@@ -341,9 +428,109 @@ h2 {
     margin-top: 2rem;
 }
 
-.center-page {
-    position: relative;
-    align-items: center;
-    margin-left: 12rem;
+.bio-pics {
     margin-bottom: 5rem;
+    width: 100%;
+}
+
+#center-biopics {
+    display: flex;
+    justify-content: center;
+}
+
+.copyright {
+    font-size: 20px !important;
+    font-weight: bold;
+}
+
+#modal-head {
+    text-align: center !important;
+    align-items: center !important;
+    justify-content: center;
+    font-size: 32px;
+}
+
+#modal-foot {
+    text-align: center !important;
+    align-items: center !important;
+    justify-content: center;
+}
+
+#modal-content {
+    font-size: 24px !important;
+    text-align: center;
+}
+
+#reset {
+    font-size: 18px !important;
+}
+
+#reset:hover {
+    text-shadow: 0px 2px 2px var(--black);
+    box-shadow: 3px 3px 2px var(--grey);
+}
+
+#clear {
+    font-size: 18px !important;
+}
+
+#clear:hover {
+    text-shadow: 0px 2px 2px var(--black);
+    box-shadow: 3px 3px 2px var(--grey);
+}
+
+#hide {
+    display: none;
+}
+
+#results-foot {
+    background-color: #fff !important;
+}
+
+/* For screens wider than 1024px */
+@media screen and (min-width: 1024px) {
+    .columns {
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: -1rem;
+        margin-right: -1rem;
+    }
+
+    .column {
+        flex-basis: 0;
+        flex-grow: 1;
+        flex-shrink: 0;
+        padding: 1rem;
+    }
+}
+
+/* For screens wider than 768px and less than or equal to 1024px */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .columns {
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: -0.75rem;
+        margin-right: -0.75rem;
+    }
+
+    .column {
+        flex-basis: 0;
+        flex-grow: 1;
+        flex-shrink: 0;
+        padding: 0.75rem;
+    }
+}
+
+/* For screens less than or equal to 768px */
+@media screen and (max-width: 768px) {
+    .columns {
+        display: block;
+        margin-left: -0.75rem;
+        margin-right: -0.75rem;
+    }
+
+    .column {
+        flex-basis: auto;
+        padding: 0.75rem;
+    }
 }

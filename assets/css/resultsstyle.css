@@ -57,9 +57,11 @@
     --orange: #CE9061;
 }
 
-.body, .footer {
-    background-color: #374045;
+body {
+    font-family: 'Oswald', sans-serif;
+        
 }
+
 .section {
    
     color: black;
@@ -74,7 +76,7 @@ background-color: #567189;
 }
 
 #dashes {
-background-color: #f6e0b5;
+background-color: #374045;
 }
 
 .left-logo {
@@ -86,10 +88,11 @@ background-color: #f6e0b5;
 }
 
 
- .headerforsnd {
-    color:  #BB674B;
+.headerforsnd {
+    color: whitesmoke;
     font-size: 25px;
-    font-weight: 300;
+    font-weight: 350;
+    margin-bottom: 20px;
 }
 
 .navbar-item {
@@ -104,4 +107,30 @@ background-color: #f6e0b5;
     color: #000;
 }
 
-/*yo*/
+.trail-name {
+    font-weight: bold;
+    color: white;
+    font-family: 'Amatic SC', cursive;
+    /* Add other styling properties here */
+}
+
+h2 {
+    color: white;
+}
+
+#home-btn {
+    width: 10em;
+    border-radius: 25px;
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 1px;
+    font-size: 20px;
+}
+
+#home-btn:hover {
+    background-color: var(--dusty-blue);
+    color: var(--white);
+    letter-spacing: 2px;
+    font-size: 21px;
+    font-weight: bolder;
+    border: 2px solid #000;
+}
