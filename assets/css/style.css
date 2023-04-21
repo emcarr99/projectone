@@ -139,42 +139,42 @@ h3 {
 }
 
 .slider .slide:nth-child(1) {
-    background-image: url('assets/images/Trail1.png');
+    background-image: url('../images/Trail1.png');
     animation-delay: 0s;
 }
 
 .slider .slide:nth-child(2) {
-    background-image: url('assets/images/Trail2.png');
+    background-image: url('../images/Trail2.png');
     animation-delay: -4.4s;
 }
 
 .slider .slide:nth-child(3) {
-    background-image: url('assets/images/Trail3.png');
+    background-image: url('../images/Trail3.png');
     animation-delay: -8.8;
 }
 
 .slider .slide:nth-child(4) {
-    background-image: url('assets/images/Trail4.png');
+    background-image: url('../images/Trail4.png');
     animation-delay: -13.2s;
 }
 
 .slider .slide:nth-child(5) {
-    background-image: url('assets/images/Trail5.png');
+    background-image: url('../images/Trail5.png');
     animation-delay: -17.6s;
 }
 
 .slider .slide:nth-child(6) {
-    background-image: url('assets/images/Trail6.png');
+    background-image: url('../images/Trail6.png');
     animation-delay: -22s;
 }
 
 .slider .slide:nth-child(7) {
-    background-image: url('assets/images/Trail7.png');
+    background-image: url('../images/Trail7.png');
     animation-delay: -26.4s;
 }
 
 .slider .slide:nth-child(8) {
-    background-image: url('assets/images/Trail8.png');
+    background-image: url('../images/Trail8.png');
     animation-delay: -30.8s;
 }
 
