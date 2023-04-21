@@ -57,7 +57,10 @@
     --orange: #CE9061;
 }
 
-
+body {
+    font-family: 'Oswald', sans-serif;
+        
+}
 
 .section {
    
@@ -107,6 +110,27 @@ background-color: #374045;
 .trail-name {
     font-weight: bold;
     color: white;
+    font-family: 'Amatic SC', cursive;
     /* Add other styling properties here */
 }
 
+h2 {
+    color: white;
+}
+
+#home-btn {
+    width: 10em;
+    border-radius: 25px;
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 1px;
+    font-size: 20px;
+}
+
+#home-btn:hover {
+    background-color: var(--dusty-blue);
+    color: var(--white);
+    letter-spacing: 2px;
+    font-size: 21px;
+    font-weight: bolder;
+    border: 2px solid #000;
+}
