@@ -227,14 +227,14 @@ h1 {
     position: relative;
     text-align: center;
     font-family: 'Amatic SC', cursive;
-    font-size: 78px !important;
+    font-size: 90px !important;
     padding-bottom: 20px;
 }
 
 h2 {
     position: relative;
     text-align: center;
-    font-size: 36px !important;
+    font-size: 40px !important;
 }
 
 #snd-description {
@@ -243,10 +243,21 @@ h2 {
     margin-bottom: -4rem !important;
 }
 
+#break-ht {
+    line-height: 11px;
+}
+
 #how-it-works {
     position: relative;
     text-align: center;
-    font-size: 30px !important;
+    font-size: 38px !important;
+    line-height: 1.6em;
+}
+
+ul {
+    text-align: center;
+    font-size: 33px;
+    line-height: 1.7em;
 }
 
 #card-position {
@@ -354,8 +365,10 @@ h2 {
 }
 
 .treeline {
-    display: inline-flex;
-    margin-top: -10.3rem;
+    display: flex;
+    margin-top: -2.8em;
+    justify-content: center;
+
 }
 
 #dev-name {
@@ -368,7 +381,7 @@ h2 {
 
 #blurb {
     text-align: center;
-    font-size: 21px;
+    font-size: 23px;
     padding-top: 30px;
 }
 
