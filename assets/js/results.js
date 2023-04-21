@@ -5,50 +5,44 @@ $(document).ready(function () {
   console.log(results);
 
   // async function to receive values from search specifications
-  async function getValues() {
-    let searchValues = document.location.search.split("&");
-    console.log(searchValues);
+ function getValues() {
+   let searchValues = document.location.search.split("&");
+   console.log(searchValues);
 
-    let trailType = searchValues[0].split("=").pop();
-    let dietType = searchValues[1].split("=").pop();
+   let trailType = searchValues[0].split("=").pop();
+   let dietType = searchValues[1].split("=").pop();
 
-    // Fetch and render snack API first
-    await getSnackApi(dietType);
-    console.log(dietType);
+   getTrailApi(trailType);
+   console.log(trailType);
+   getSnackApi(dietType);
+   console.log(dietType);
+ }
 
-    // Fetch and render trail API second
-    await getTrailApi(trailType);
-    console.log(trailType);
-  }
+ async function getTrailApi(trailType) {
+   const options = {
+     method: "GET",
+     headers: {
+       "X-RapidAPI-Key": "ae491393c8msh4acba715ebb33ebp1addcajsn3f334bdd5e78",
+       "X-RapidAPI-Host": "trailapi-trailapi.p.rapidapi.com",
+     },
+   };
+   console.log(trailType);
+   fetch(
+     "https://trailapi-trailapi.p.rapidapi.com/activity/?lat=30.36697&lon=-97.78647&q-city_cont=Austin&q-country_cont=United%20States&q-state_cont=Texas&radius=25&q-activities_activity_type_name_eq=" +
+       trailType,
+     options
+   )
+     .then((trailResults) => trailResults.json())
+     .then((trailResults) => {
+       console.log(trailResults);
+       console.log(Object.values(trailResults));
+       return Object.values(trailResults);
+       // return trailResults;
+     })
+     .then((trailResults) => renderTrail(trailResults))
 
-async function getTrailApi(trailType) {
-  // Get user input values
-  const city = document.getElementById("cityInput").value;
-  const state = document.getElementById("stateInput").value;
-  const trailType = document.getElementById("trailType").value;
-
-  const options = {
-    method: "GET",
-    headers: {
-      "X-RapidAPI-Key": "ae491393c8msh4acba715ebb33ebp1addcajsn3f334bdd5e78",
-      "X-RapidAPI-Host": "trailapi-trailapi.p.rapidapi.com",
-    },
-  };
-
-  // Use user input values in API URL
-  const url = `https://trailapi-trailapi.p.rapidapi.com/activity/?lat=30.36697&lon=-97.78647&q-city_cont=${city}&q-country_cont=United%20States&q-state_cont=${state}&radius=25&q-activities_activity_type_name_eq=${trailType}`;
-
-  fetch(url, options)
-    .then((trailResults) => trailResults.json())
-    .then((trailResults) => {
-      console.log(trailResults);
-      console.log(Object.values(trailResults));
-      // needed to get the individual trail names 
-      return Object.values(trailResults);
-    })
-    .then((trailResults) => renderTrail(trailResults))
-    .catch((err) => console.error(err));
-}
+     .catch((err) => console.error(err));
+ }
 
 // fetches the snack recipes
   async function getSnackApi(dietType) {

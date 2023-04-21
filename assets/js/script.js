@@ -61,33 +61,20 @@ footerButton.addEventListener("click", function (event) {
 //var results= localStorage.getItem("choices")
 localStorage.setItem("choices", JSON.stringify(results));
 })
-// using async function to use a promise to pass in parameters
-$("#searchBtn").on("click", async (event) => {
-  event.preventDefault(); // Prevent form submission and page refresh
 
+// using async function to use a promise to pass in parameters
+$("#searchBtn").on("click", async () => {
   let type = document.getElementById("trailType").value;
   let diet = document.getElementById("diet").value;
-  let city = document.getElementById("cityInput").name;
-  let state = document.getElementById("stateInput").name;
+  document.location.assign(
+    "./results.html?trailType=" + type + "&diet=" + diet
+  );
+  await Promise.race([getTrailApi(), getSnackApi()]);
+  renderTrail();
 
-  try {
-    // Make the API calls and await their completion
-    await Promise.all([getTrailApi(), getSnackApi()]);
-
-    // Render the trail results
-    // renderTrail();
-
-    // Redirect to results page with query parameters
-    document.location.assign(
-      `/results.html?city=${city}&state=${state}&trailType=${type}&diet=${diet}`
-    );
-
-    console.log(type, diet);
-  } catch (error) {
-    // Handle any errors that may occur during API calls or rendering
-    console.error(error);
-  }
+  console.log(type, diet);
 });
+
 
 
 
