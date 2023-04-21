@@ -139,12 +139,12 @@ h3 {
 }
 
 .slider .slide:nth-child(1) {
-    background-image: url('./assets/images/Trail1.png');
+    background-image: url('./images/Trail1.png');
     animation-delay: 0s;
 }
 
 .slider .slide:nth-child(2) {
-    background-image: url('./assets/images/Trail2.png');
+    background-image: url('./images/Trail2.png');
     animation-delay: -4.4s;
 }
 
