@@ -243,6 +243,10 @@ h2 {
     margin-bottom: -4rem !important;
 }
 
+#break-ht {
+    line-height: 11px;
+}
+
 #how-it-works {
     position: relative;
     text-align: center;
@@ -250,8 +254,10 @@ h2 {
     line-height: 1.6em;
 }
 
-ol {
-    align-items: center;
+ul {
+    text-align: center;
+    font-size: 33px;
+    line-height: 1.7em;
 }
 
 #card-position {
@@ -359,8 +365,10 @@ ol {
 }
 
 .treeline {
-    display: inline-flex;
-    margin-top: -10.3rem;
+    display: flex;
+    margin-top: -2.8em;
+    justify-content: center;
+
 }
 
 #dev-name {
@@ -373,7 +381,7 @@ ol {
 
 #blurb {
     text-align: center;
-    font-size: 21px;
+    font-size: 23px;
     padding-top: 30px;
 }
 
