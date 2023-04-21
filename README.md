@@ -4,11 +4,11 @@ Welcome to our one-stop shop for your next adventure! Are you itching to get out
 
 # Installation 
 
-No installation is needed! You can access Snack n’ Dash here: <link>
+No installation is needed! You can access Snack n’ Dash here: https://emcarr99.github.io/snackndash/
 
 # Usage 
 
-You can access the deployed application here: <link> 
+You can access the deployed application here: https://emcarr99.github.io/snackndash/
 
 For a more in-depth use tutorial please see our repo's wiki! https://github.com/emcarr99/snackndash/wiki/How-to-Use-Snack-n'-Dash
 
