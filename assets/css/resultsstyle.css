@@ -59,11 +59,11 @@
 
 body {
     font-family: 'Oswald', sans-serif;
-        
+
 }
 
 .section {
-   
+
     color: black;
 }
 
@@ -72,11 +72,11 @@ body {
 }
 
 #snacks {
-background-color: #567189;
+    background-color: #567189;
 }
 
 #dashes {
-background-color: #374045;
+    background-color: #374045;
 }
 
 .left-logo {
@@ -133,4 +133,12 @@ h2 {
     font-size: 21px;
     font-weight: bolder;
     border: 2px solid #000;
+}
+
+#twitter {
+    
+}
+
+#twitter-share {
+    color: white;
 }
