@@ -139,22 +139,22 @@ h3 {
 }
 
 .slider .slide:nth-child(1) {
-    background-image: url('/assets/images/Trail1.png');
+    background-image: url('assets/images/Trail1.png');
     animation-delay: 0s;
 }
 
 .slider .slide:nth-child(2) {
-    background-image: url('/assets/images/Trail2.png');
+    background-image: url('assets/images/Trail2.png');
     animation-delay: -4.4s;
 }
 
 .slider .slide:nth-child(3) {
-    background-image: url('/assets/images/Trail3.png');
+    background-image: url('assets/images/Trail3.png');
     animation-delay: -8.8s;
 }
 
 .slider .slide:nth-child(4) {
-    background-image: url('/assets/images/Trail4.png');
+    background-image: url('assets/images/Trail4.png');
     animation-delay: -13.2s;
 }
 
