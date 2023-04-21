@@ -53,18 +53,18 @@ var content = JSON.parse(localStorage.getItem("choices"));
 if (content[0] && content[0].length > 0){
   console.log(content[0]);
   var dietaryPreference = document.getElementById("display-text1");
-  dietaryPreference.innerHTML=(content[0]); 
+  dietaryPreference.innerText=(content[0]); 
 }
   if (content[1] && content[1].length > 0){
   console.log(content[1]);
   var trailType = document.getElementById("display-text2");
-  trailType.innerHTML=(content[1]); 
+  trailType.innerText=(content[1]); 
   }
 
   if (content[2] && content[2].length > 0){
     console.log(content[2]);
     var grpSize = document.getElementById("display-text3");
-    grpSize.innerHTML=(content[2]); 
+    grpSize.innerText=(content[2]); 
     }
 
   localStorage.clear();
@@ -82,23 +82,20 @@ footerButton.addEventListener("click", function (event) {
 //var results= localStorage.getItem("choices")
 localStorage.setItem("choices", JSON.stringify(results));
 })
-
 // using async function to use a promise to pass in parameters
 $("#searchBtn").on("click", async () => {
   let type = document.getElementById("trailType").value;
   let diet = document.getElementById("diet").value;
+  let city = document.getElementById("cityInput").value;
+  let state = document.getElementById("stateInput").value;
   document.location.assign(
-    "./results.html?trailType=" + type + "&diet=" + diet
+    `./results.html?city=${city}&state=${state}&trailType=${trailType}&diet=${diet}`
   );
   await Promise.race([getTrailApi(), getSnackApi()]);
   renderTrail();
 
   console.log(type, diet);
 });
-
-
-
-
 
 
 //document.addEventListener('DOMContentLoaded', () => {/
