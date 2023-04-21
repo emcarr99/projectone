@@ -40,8 +40,6 @@ Font Awesome & Google Fonts
 
 Time Ticker Banner Source: https://code-boxx.com/html-css-news-ticker-horizontal-vertical/
 
-Homepage Images Source: https://secure.img1-cg.wfcdn.com/im/83172124/resize-h445%5Ecompr-r85/1747/174726922/Copper+And+Gold+Mountains+-+Wrapped+Canvas+Graphic+Art.jpg
-
 Weather Widget Source: https://weatherwidget.org/
 
 TrailAPI: https://rapidapi.com/trailapi/api/trailapi/
