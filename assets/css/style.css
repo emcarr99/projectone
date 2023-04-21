@@ -227,14 +227,14 @@ h1 {
     position: relative;
     text-align: center;
     font-family: 'Amatic SC', cursive;
-    font-size: 78px !important;
+    font-size: 90px !important;
     padding-bottom: 20px;
 }
 
 h2 {
     position: relative;
     text-align: center;
-    font-size: 36px !important;
+    font-size: 40px !important;
 }
 
 #snd-description {
@@ -246,7 +246,12 @@ h2 {
 #how-it-works {
     position: relative;
     text-align: center;
-    font-size: 30px !important;
+    font-size: 38px !important;
+    line-height: 1.6em;
+}
+
+ol {
+    align-items: center;
 }
 
 #card-position {
