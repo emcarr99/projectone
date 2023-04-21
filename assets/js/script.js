@@ -18,6 +18,7 @@ var clearButton = document.querySelector("#modal-btn");
 var modal = document.querySelector(".modal");
 
 var reset =document.querySelector("#reset")
+
 //var closeModal = document.querySelector("#mod-clear")
 //dropdowns.forEach(dietaryRestrictions => {
 const dietNone = document.querySelector("diet-none");
@@ -39,15 +40,35 @@ const grpDate = document.querySelector("grp-size-date");
 const grpBig = document.querySelector("grp-size-5");
 const grpHuge = document.querySelector("grp-size-big");
 //})
-
 reset.addEventListener("click", function (event) {
     console.log("resetting")
-var noDiet =document.querySelector("#diet");
-var noTrail =document.querySelector("#trailType");
-var noGrpsize =document.querySelector("#size-of-grp");
+var noDiet =document.querySelector("#diet-default");
+var noTrail =document.querySelector("#trail-default");
+var noGrpsize =document.querySelector("#grpsz-default");
 noDiet.value= " ";
 noTrail.value=" ";
 noGrpsize.value=" ";
+
+var content = JSON.parse(localStorage.getItem("choices"));
+if (content[0] && content[0].length > 0){
+  console.log(content[0]);
+  var dietaryPreference = document.getElementById("display-text1");
+  dietaryPreference.innerHTML=(content[0]); 
+}
+  if (content[1] && content[1].length > 0){
+  console.log(content[1]);
+  var trailType = document.getElementById("display-text2");
+  trailType.innerHTML=(content[1]); 
+  }
+
+  if (content[2] && content[2].length > 0){
+    console.log(content[2]);
+    var grpSize = document.getElementById("display-text3");
+    grpSize.innerHTML=(content[2]); 
+    }
+
+  localStorage.clear();
+  
 })
 
 footerButton.addEventListener("click", function (event) {
@@ -124,7 +145,7 @@ $("#searchBtn").on("click", async () => {
     document.addEventListener('keydown', (event) => {
       const e = event || window.event;
   
-      if (e.keyCode === 27) { // Escape key
+      if (e.key=== 27) { // Escape key
         closeAllModals();
       }
     });

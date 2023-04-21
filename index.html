@@ -58,7 +58,7 @@
         <nav class="navbar" id="navbar-border" role="navigation" aria-label="main navigation">
             <div class="navbar-brand">
                 <a class="navbar-logo">
-                    <img src="/assets/images/SnD lettering2.png" width="80" height="28">
+                    <!-- <img src="/assets/images/SnD lettering2.png" width="80" height="28"> -->
                 </a>
             </div>
 
@@ -90,13 +90,14 @@
         <h2 class="subtitle">
             <strong>Snack n' Dash</strong> is your one-stop-shop for planning your next outdoor adventure!
         </h2>
+        <br id="break-ht">
         <p class="subtitle" id="how-it-works"><b>Here's how it works:</b></p>
-        <ol>
-            <li>Set your location.</li>
-            <li>Pick what level of activity you are seeking.</li>
-            <li>And let us know if you have any dietary preferences.<br>
+        <ul>
+            <li>1.&ensp; Set your location.</li>
+            <li>2.&ensp; Pick what level of activity you are seeking.</li>
+            <li>3.&ensp; And let us know if you have any dietary preferences.<br>
             <i>And we'll take it from there!</i></li>
-        </ol>
+        </ul>
     </section>
 
 
@@ -137,7 +138,7 @@
                         <div class="control">
                             <div class="select">
                                 <select required id="diet">
-                                    <option value="" disabled selected hidden>Select</option>
+                                    <option id="diet-default" value="" disabled selected hidden >Select</option>
                                     <option id="diet-none" value="">None</option>
                                     <option id="diet-dairy" value="dairy-free">No dairy</option>
                                     <option id="diet-gluten" value="gluten-free">No gluten</option>
@@ -152,7 +153,7 @@
                             <div class="control">
                                 <div class="select" id="pace">
                                     <select name="trailType" id="trailType">
-                                        <option value="" disabled selected hidden>Select</option>
+                                        <option id="trail-default" value="" disabled selected hidden>Select</option>
                                         <option id="trail-any" value="">Surprise me! I'm down
                                             for anything.</option>
                                         <option id="trail-hike" value="hiking">Hiking</option>
@@ -167,7 +168,7 @@
                             <div class="control">
                                 <div class="select" id="grp-size">
                                     <select id="size-of-grp">
-                                        <option value="" disabled selected hidden>Select</option>
+                                        <option id="groupsz-default" value="" disabled selected hidden>Select</option>
                                         <option id="grp-size-unsure" value="">Not sure yet</option>
                                         <option id="grp-size-solo">Solo</option>
                                         <option id="grp-size-date">Date</option>
@@ -203,15 +204,15 @@
                         </ul>
 
 
-                        <label class="label">*</label>
+                        <label class="label" id="display-text1"></label>
                         <div class="control">
                         </div>
 
-                        <label class="label">*</label>
+                        <label class="label" id="display-text2"></label>
                         <div class="control">
                         </div>
 
-                        <label class="label">*</label>
+                        <label class="label" id="display-text3"></label>
                         <div class="control">
                         </div>
                     </div>

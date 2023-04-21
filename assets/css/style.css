@@ -14,7 +14,6 @@
 
 body {
     font-family: 'Oswald', sans-serif;
-    ;
 }
 
 #header {
@@ -243,6 +242,10 @@ h2 {
     margin-bottom: -4rem !important;
 }
 
+#break-ht {
+    line-height: 11px;
+}
+
 #how-it-works {
     position: relative;
     text-align: center;
@@ -250,8 +253,10 @@ h2 {
     line-height: 1.6em;
 }
 
-ol {
-    align-items: center;
+ul {
+    text-align: center;
+    font-size: 33px;
+    line-height: 1.7em;
 }
 
 #card-position {
@@ -359,8 +364,10 @@ ol {
 }
 
 .treeline {
-    display: inline-flex;
-    margin-top: -10.3rem;
+    display: block;
+    margin-top: -2.8em;
+    justify-content: center;
+    min-width: none;
 }
 
 #dev-name {
@@ -373,7 +380,7 @@ ol {
 
 #blurb {
     text-align: center;
-    font-size: 21px;
+    font-size: 23px;
     padding-top: 30px;
 }
 
@@ -405,7 +412,11 @@ ol {
 }
 
 #img-us {
-    margin-left: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: .5rem;
+    margin-right: .5rem;
+    min-width: 340px;
 }
 
 #img-us:hover {
@@ -417,11 +428,14 @@ ol {
     margin-top: 2rem;
 }
 
-.center-page {
-    position: relative;
-    align-items: center;
-    margin-left: 12rem;
+.bio-pics {
     margin-bottom: 5rem;
+    width: 100%;
+}
+
+#center-biopics {
+    display: flex;
+    justify-content: center;
 }
 
 .copyright {
@@ -471,4 +485,52 @@ ol {
 
 #results-foot {
     background-color: #fff !important;
+}
+
+/* For screens wider than 1024px */
+@media screen and (min-width: 1024px) {
+    .columns {
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: -1rem;
+        margin-right: -1rem;
+    }
+
+    .column {
+        flex-basis: 0;
+        flex-grow: 1;
+        flex-shrink: 0;
+        padding: 1rem;
+    }
+}
+
+/* For screens wider than 768px and less than or equal to 1024px */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .columns {
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: -0.75rem;
+        margin-right: -0.75rem;
+    }
+
+    .column {
+        flex-basis: 0;
+        flex-grow: 1;
+        flex-shrink: 0;
+        padding: 0.75rem;
+    }
+}
+
+/* For screens less than or equal to 768px */
+@media screen and (max-width: 768px) {
+    .columns {
+        display: block;
+        margin-left: -0.75rem;
+        margin-right: -0.75rem;
+    }
+
+    .column {
+        flex-basis: auto;
+        padding: 0.75rem;
+    }
 }
