@@ -255,11 +255,55 @@ h2 {
 }
 
 #preferences-container {
-    width: 200px !important;
+    width: 180px !important;
 }
 
 #past-searches-container {
-    width: 200px !important;
+    width: 180px !important;
+}
+
+#trailForm {
+    align-items: center;
+}
+
+.card-header {
+    font-size: 22px;
+    background-color: #8b7e74ef;
+    letter-spacing: 1px;
+}
+
+#card-header-pref {
+    background-color: #8b7e74a7 !important;
+}
+
+#searchBtn {
+    font-size: 17px;
+    font-family: Oswald, sans-serif;
+    letter-spacing: 1px;
+}
+
+#searchBtn:hover {
+    cursor: pointer;
+    background-color: var(--yellow);
+    font-size: 19px;
+    font-weight: bold;
+}
+
+#modal-btn {
+    font-size: 17px;
+    font-family: Oswald, sans-serif;
+    letter-spacing: 1px;
+}
+
+#modal-btn:hover {
+    cursor: pointer;
+    background-color: var(--yellow);
+    font-size: 19px;
+    font-weight: bold;
+}
+
+.label {
+    font-size: 19px;
 }
 
 #diet {}
@@ -306,11 +350,26 @@ h2 {
 
 #about-us {
     font-size: 104px !important;
+    letter-spacing: 1px;
 }
 
 .treeline {
     display: inline-flex;
     margin-top: -10.3rem;
+}
+
+#dev-name {
+    font-size: 26px;
+}
+
+#dev-github {
+    font-size: 21px;
+}
+
+#blurb {
+    text-align: center;
+    font-size: 21px;
+    padding-top: 30px;
 }
 
 #hero-bottom {
@@ -319,14 +378,25 @@ h2 {
 
 #home-align {
     align-self: flex-end;
-    margin-right: 6em;
+    margin-right: 18em;
     margin-top: 1em;
 }
 
 #home-btn {
     width: 10em;
     border-radius: 25px;
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 1px;
+    font-size: 20px;
+}
 
+#home-btn:hover {
+    background-color: var(--dusty-blue);
+    color: var(--white);
+    letter-spacing: 2px;
+    font-size: 21px;
+    font-weight: bolder;
+    border: 2px solid #000;
 }
 
 #img-us {
@@ -394,6 +464,6 @@ h2 {
     display: none;
 }
 
-#about-foot {
+#results-foot {
     background-color: #fff !important;
 }

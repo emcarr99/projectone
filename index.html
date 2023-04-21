@@ -30,7 +30,7 @@
                 <div class="slide"></div>
                 <div class="slide"></div>
                 <div class="slide"></div>
-            <h3 class="logo" id="logo">Snack n' Dash</h3>
+                <h3 class="logo" id="logo">Snack n' Dash</h3>
             </div>
         </section>
 
@@ -76,11 +76,11 @@
 
             <a class="navbar-item is-hoverable" href="https://github.com/emcarr99/snackndash.git">Documentation</a>
 
-            <div class="navbar-end">
+            <!-- <div class="navbar-end">
                 <div class="navbar-item">
                     <input class="input is-rounded" type="text" placeholder=" Set my Location          🔎">
                 </div>
-            </div>
+            </div> -->
             </div>
         </nav>
     </header>
@@ -102,17 +102,30 @@
             <div class="card">
                 <header class="card-header">
                     <p class="card-header-title">
-                        Activity Preferences
+                        Set Your Location
                     </p>
                 </header>
-<form id="trailForm">
-    <label for="cityInput">City:</label>
-    <input type="text" id="cityInput" name="city" placeholder="Enter city name">
-    <br>
-    <label for="stateInput">State:</label>
-    <input type="text" id="stateInput" name="state" placeholder="Enter state name">
-    <br>
-
+    <!-- Location Input Form (CITY & STATE) -->
+                <div class="card-content columns">
+                    <div class="field column">
+                        <form id="trailForm">
+                            <div class="field">
+                            <label class="label" for="cityInput"><b>City :</b></label>
+                            <input class="input" type="text" id="cityInput" name="city" placeholder="City">
+                            </div>
+                            <div class="field">
+                            <label class="label" for="stateInput"><b>State :</b></label>
+                            <input class="input" type="text" id="stateInput" name="state" placeholder="State (no abbr.)">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+    <!-- Dietary Preferences -->
+    <header class="card-header" id="card-header-pref">
+        <p class="card-header-title">
+            Activity Preferences
+        </p>
+    </header>
                 <div class="card-content columns">
                     <div class="field column">
                         <label class="label">Do you have any dietary preferences?</label>
@@ -120,7 +133,7 @@
                             <div class="select">
                                 <select required id="diet">
                                     <option value="" disabled selected hidden>Select</option>
-                                    <option id="diet-none" value="" >None</option>
+                                    <option id="diet-none" value="">None</option>
                                     <option id="diet-dairy" value="dairy-free">No dairy</option>
                                     <option id="diet-gluten" value="gluten-free">No gluten</option>
                                     <option id="diet-nuts" value="peanut-free">No nuts</option>
@@ -180,6 +193,10 @@
 
                 <div class="card-content columns">
                     <div class="field column">
+                        <ul>
+                            <!-- APPEND LOCAL STORAGE SAVED SEARCH RESULTS IN LIST -->
+                        </ul>
+
 
                         <label class="label">*</label>
                         <div class="control">
@@ -197,7 +214,8 @@
 
                 <footer class="card-footer">
                     <!-- <button class="card-footer-item" onclick="window.location.href='/results.html'">Save!</button> -->
-                    <button class="card-footer-item js-modal-trigger" data-target="main-model" id="modal-btn ">Clear Saved Searches</button>
+                    <button class="card-footer-item js-modal-trigger" data-target="main-model" id="modal-btn">Clear
+                        Saved Searches</button>
                 </footer>
             </div>
         </div>
@@ -212,26 +230,26 @@
                 <p class="modal-card-title" id="modal-head">Clear Search History?</p>
                 <button class="delete" aria-label="close"></button>
             </header>
-                <!-- CONNECT MODAL CLEAR WITH JS CALL + SCRIPT -->
-                <div id="hide">
+            <!-- CONNECT MODAL CLEAR WITH JS CALL + SCRIPT -->
+            <div id="hide">
                 <button class="js-modal-trigger" id="mod-clear" data-target="mod-clear">Yes!</button>
-                </div>
-                <section class="modal-card-body" id="modal-content">
-                    <b>Are you sure?</b> <br>
-                    Once you delete your search history, it ain't comin' back...
-                </section>
-                <footer class="modal-card-foot" id="modal-foot">
-                    <button class="button is-success" id="reset">Clear it!</button>
-                    <button class="button is-danger" id="clear">Don't Clear!</button>
-                </footer>
+            </div>
+            <section class="modal-card-body" id="modal-content">
+                <b>Are you sure?</b> <br>
+                Once you delete your search history, it ain't comin' back...
+            </section>
+            <footer class="modal-card-foot" id="modal-foot">
+                <button class="button is-success" id="reset">Clear it!</button>
+                <button class="button is-danger" id="clear">Don't Clear!</button>
+            </footer>
         </div>
     </div>
 
-<footer class="footer">
-    <div class="content has-text-centered">
-        <p class="copyright">🔆 &#169 2023 | UT Coding Bootcamp Team 1 WebDev 🔆</p>
-    </div>
-</footer>
+    <footer class="footer">
+        <div class="content has-text-centered">
+            <p class="copyright">🔆 &#169 2023 | UT Coding Bootcamp Team 1 WebDev 🔆</p>
+        </div>
+    </footer>
 
 </body>
 
