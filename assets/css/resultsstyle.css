@@ -72,11 +72,12 @@ body {
 }
 
 #snacks {
-    background-color: #567189;
+    background-color: #374045;
 }
 
 #dashes {
-    background-color: #374045;
+    
+    background-color: #567189;
 }
 
 .left-logo {
@@ -135,10 +136,21 @@ h2 {
     border: 2px solid #000;
 }
 
-#twitter {
-    
+.twitter {
+    color: #fff;
+    margin-left: 10%;
 }
 
 #twitter-share {
     color: white;
+}
+
+h1 {
+    color: white;
+    font-weight: bold;
+}
+
+p {
+    color: #fff;
+    margin-bottom: 10px;
 }
