@@ -24,7 +24,19 @@ if (content[0] && content[0].length > 0){
     }
 
   localStorage.clear();
-  
+
+})
+
+footerButton.addEventListener("click", function (event) {
+    var options = document.querySelectorAll("option")
+    var results = [];
+    options.forEach(function (option) {
+        if (option.selected == true) {
+            results.push(option.textContent)
+        }
+    })
+//var results= localStorage.getItem("choices")
+localStorage.setItem("choices", JSON.stringify(results));
 })
 
 footerButton.addEventListener("click", function (event) {
@@ -42,10 +54,8 @@ localStorage.setItem("choices", JSON.stringify(results));
 $("#searchBtn").on("click", async () => {
   let type = document.getElementById("trailType").value;
   let diet = document.getElementById("diet").value;
-  let city = document.getElementById("cityInput").value;
-  let state = document.getElementById("stateInput").value;
   document.location.assign(
-    `./results.html?city=${city}&state=${state}&trailType=${trailType}&diet=${diet}`
+    "./results.html?trailType=" + type + "&diet=" + diet
   );
   await Promise.race([getTrailApi(), getSnackApi()]);
   renderTrail();
