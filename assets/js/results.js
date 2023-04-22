@@ -2,18 +2,18 @@ $(document).ready(function () {
   const apiKey = "ae491393c8msh4acba715ebb33ebp1addcajsn3f334bdd5e78";
 
   var results = JSON.parse(localStorage.getItem("choices"));
-  console.log(results);
+  // console.log(results);
 
   // async function to receive values from search specifications
   function getValues() {
     let searchValues = document.location.search.split("&");
-    console.log(searchValues);
+    // console.log(searchValues);
 
     let trailType = searchValues[0].split("=").pop();
     let dietType = searchValues[1].split("=").pop();
 
     getTrailApi(trailType);
-    console.log(trailType);
+    // console.log(trailType);
     getSnackApi(dietType);
     console.log(dietType);
   }
@@ -26,16 +26,16 @@ $(document).ready(function () {
         "X-RapidAPI-Host": "trailapi-trailapi.p.rapidapi.com",
       },
     };
-    console.log(trailType);
+    // console.log(trailType);
     fetch(
-      "https://trailapi-trailapi.p.rapidapi.com/activity/?lat=30.36697&lon=-97.78647&q-city_cont=Austin&q-country_cont=United%20States&q-state_cont=Texas&radius=25&q-activities_activity_type_name_eq=" +
-      trailType,
+      "https://trailapi-trailapi.p.rapidapi.com/activity/?lat=34.1&limit=25&lon=-105.2&q-city_cont=Austin&q-country_cont=United%20States&q-state_cont=Texas&radius=25&q-activities_activity_type_name_eq" +
+        trailType,
       options
     )
       .then((trailResults) => trailResults.json())
       .then((trailResults) => {
-        console.log(trailResults);
-        console.log(Object.values(trailResults));
+        // console.log(trailResults);
+        // console.log(Object.values(trailResults));
         return Object.values(trailResults);
         // return trailResults;
       })
@@ -43,7 +43,7 @@ $(document).ready(function () {
 
       .catch((err) => console.error(err));
   }
-
+// console.log(dietType);
   // fetches the snack recipes
   async function getSnackApi(dietType) {
     let recipeResults = await fetch(
@@ -52,13 +52,13 @@ $(document).ready(function () {
     );
 
     let recipeList = await recipeResults.json();
-    console.log(recipeList);
+    // console.log(recipeList);
 
     renderSnack(recipeList);
   }
   // renders trail list on the results page
   function renderTrail(trailResults) {
-    console.log("it works")
+    // console.log("it works")
     const trailCards = document.querySelectorAll(".trailCard");
     for (var i = 0; i < trailCards.length; i++) {
       trailCards[i].innerHTML = "";
